@@ -6,7 +6,7 @@
 
 - [2026-05-18] [Toolformer](https://arxiv.org/abs/2302.04761)
   - LLM의 tool-use 능력을 self-supervised 방식으로 학습
-  - API 호출과 외부 도구 활용을 모델 내부에 통합
+  - API 호출 and 외부 도구 활용을 모델 내부에 통합
   - Hermes Agent tool orchestration 구조 참고용
 
 ---
@@ -41,9 +41,10 @@
 
 ## Multimodal AI
 
-- [2024-11-29] [A Survey on Multimodal Large Language Models](https://arxiv.org/abs/2306.13549)
-  - GPT-4V 이후 급격히 발전한 멀티모달 LLM 연구를 종합적으로 정리한 서베이 논문
-  - 아키텍처, 학습 전략, 평가, 확장 방향 논의
+- [2026-05-18] [Nous Research — Token Superposition](https://nousresearch.com/token-superposition?utm_source=chatgpt.com)
+  - Token Superposition Training(TST) 공식 기술 설명
+  - sparse activation 및 representation overlap 개념 설명
+  - 차세대 효율적 pretraining 접근 방식 참고 자료
 
 - [2026-05-07] [Efficient Pre-Training with Token Superposition](https://arxiv.org/abs/2605.06546)
   - Nous Research 제안
@@ -51,15 +52,19 @@
   - 10B 규모 모델에서 최대 2.5배 학습 시간 단축
   - 긴 컨텍스트 및 메모리 효율 연구와 연결 가능
 
-- [2026-05-18] [Nous Research — Token Superposition](https://nousresearch.com/token-superposition?utm_source=chatgpt.com)
-  - Token Superposition Training(TST) 공식 기술 설명
-  - sparse activation 및 representation overlap 개념 설명
-  - 차세대 효율적 pretraining 접근 방식 참고 자료
-
 - [2026-04-15] [Aurora: Towards Universal Generative Multimodal Time Series Forecasting](https://openreview.net/forum?id=aurora2026)
   - ICLR 2026 발표
   - 멀티모달 시계열 foundation model Aurora 제안
   - 텍스트·이미지·시계열을 결합한 범용 예측 구조
+
+- [2025-09-30] [90% Faster, 100% Code-Free: MLLM-Driven Zero-Code 3D Game Development](https://arxiv.org/abs/2509.26161?utm_source=chatgpt.com)
+  - 자연어 요구사항으로부터 코딩 없이 실행 가능한 3D 게임을 생성하는 멀티 에이전트 프레임워크 UniGen 제안
+  - Planning, Generation, Automation, Debugging 에이전트 간의 협업 체계를 통해 Unity 및 Unreal 엔진 기반 프로젝트를 자동 구축
+  - 사용자 코딩 없이도 복잡한 게임 로직과 상태 관리를 처리하며, 기존 방식 대비 개발 시간을 91.4% 단축
+
+- [2024-11-29] [A Survey on Multimodal Large Language Models](https://arxiv.org/abs/2306.13549)
+  - GPT-4V 이후 급격히 발전한 멀티모달 LLM 연구를 종합적으로 정리한 서베이 논문
+  - 아키텍처, 학습 전략, 평가, 확장 방향 논의
 
 ---
 
@@ -70,14 +75,6 @@
   - "알고리즘적 무의식" 개념 제안
   - LLM alignment와 bias 연구 참고용
 
-- [2002-12-01] [Bad Boys, Good Mothers, and the “Miracle” of Ritalin](https://doi.org/10.1017/S0269889702000650)
-  - ADHD와 리탈린의 사회적·역사적 맥락 분석
-  - 진단 및 약물 사용의 문화적 정당화 과정 탐구
-
-- [2008-06-01] [Distracted: The Erosion of Attention and the Coming Dark Age](https://prometheusbooks.com)
-  - Maggie Jackson 저서
-  - 현대 사회의 집중력 붕괴와 기술·문화적 요인 비판
-
 - [2025-03-01] [공감과 공격성의 관계: 어두운 4요소 성격의 매개효과](https://doi.org/10.0000/kjhp.2025.31.2.429)
   - 한국심리학회지
   - 공감과 공격성의 간접 관계 분석
@@ -87,3 +84,11 @@
   - Pat MacDonald
   - 현대 사회의 자기애적 성향 확산 분석
   - 문화적·임상적 함의 논의
+
+- [2008-06-01] [Distracted: The Erosion of Attention and the Coming Dark Age](https://prometheusbooks.com)
+  - Maggie Jackson 저서
+  - 현대 사회의 집중력 붕괴와 기술·문화적 요인 비판
+
+- [2002-12-01] [Bad Boys, Good Mothers, and the “Miracle” of Ritalin](https://doi.org/10.1017/S0269889702000650)
+  - ADHD와 리탈린의 사회적·역사적 맥락 분석
+  - 진단 및 약물 사용의 문화적 정당화 과정 탐구
