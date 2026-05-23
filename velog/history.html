@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>청록 헌장 — 기록 히스토리</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<style>
+:root {
+  --bg: #f5f4f0;
+  --surface: #ffffff;
+  --border: #ddd9d0;
+  --border2: #bfb9ae;
+  --text: #1c1a17;
+  --text2: #6b665e;
+  --text3: #a8a29a;
+  --teal: #1D9E75;
+  --teal-bg: #E1F5EE;
+  --teal-dk: #085041;
+  --r: 10px;
+  --r-sm: 6px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Noto Sans KR', sans-serif; background: var(--bg); color: var(--text); }
+
+header {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  padding: 16px 32px;
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+}
+header h1 { font-family: 'Noto Serif KR', serif; font-size: 19px; font-weight: 600; }
+header a {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--teal);
+  text-decoration: none;
+  border: 1px solid var(--teal);
+  padding: 4px 10px;
+  border-radius: var(--r-sm);
+}
+header a:hover { background: var(--teal-bg); }
+
+.main { max-width: 900px; margin: 0 auto; padding: 28px 20px 60px; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 20px 24px;
+  margin-bottom: 20px;
+}
+.card-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text2);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Trend chart */
+.chart-wrap { position: relative; width: 100%; height: 320px; }
+
+/* Heatmap table */
+.heatmap-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th { padding: 6px 8px; text-align: left; color: var(--text3); font-weight: 400; border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: 6px 8px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+tr:last-child td { border-bottom: none; }
+.item-name { font-weight: 500; color: var(--text); min-width: 88px; }
+.rank-cell {
+  width: 36px;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 0;
+}
+
+/* Recent list */
+.rec-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.rec-row:last-child { border-bottom: none; }
+.rec-date { min-width: 90px; font-size: 12px; color: var(--text3); }
+.rec-title { font-size: 13px; font-weight: 500; margin-bottom: 4px; }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chip { padding: 2px 8px; border-radius: 20px; font-size: 10px; }
+.chip-good { background: var(--teal-bg); color: var(--teal-dk); }
+.chip-bad  { background: #e8e6e0; color: #5f5a52; }
+
+.empty { font-size: 13px; color: var(--text3); padding: 16px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>청록(靑錄) 기록 히스토리</h1>
+  <a href="index.html">← 평가 일지로</a>
+</header>
+
+<div class="main" id="main">
+  <div class="card"><div class="empty">불러오는 중...</div></div>
+</div>
+
+<script>
+const ITEMS = [
+  { id:'structure',   name:'글 구조' },
+  { id:'logic',       name:'논리적 흐름' },
+  { id:'ai',          name:'AI 활용' },
+  { id:'data',        name:'데이터화' },
+  { id:'tone',        name:'감정 톤' },
+  { id:'problem',     name:'문제의식' },
+  { id:'politics',    name:'정치학' },
+  { id:'engineering', name:'공학' },
+  { id:'citation',    name:'인용' },
+];
+
+const PALETTE = [
+  '#1D9E75','#378ADD','#D4537E','#BA7517','#534AB7',
+  '#D85A30','#639922','#0F6E56','#993556'
+];
+
+async function loadRecords() {
+  try {
+    const res = await fetch('/api/records');
+    return await res.json();
+  } catch(e) {
+    return null;
+  }
+}
+
+function rankColor(rank) {
+  if (rank <= 2) return { bg:'#E1F5EE', color:'#085041' };
+  if (rank <= 5) return { bg:'#e8f5f0', color:'#0F6E56' };
+  if (rank <= 7) return { bg:'#f0ede6', color:'#6b665e' };
+  return { bg:'#e2dfd7', color:'#5f5a52' };
+}
+
+function renderAll(records) {
+  const main = document.getElementById('main');
+  main.innerHTML = '';
+
+  if (!records) {
+    main.innerHTML = '<div class="card"><div class="empty">서버 연결 실패 — python server.py 실행 여부를 확인하세요.</div></div>';
+    return;
+  }
+  if (!records.length) {
+    main.innerHTML = '<div class="card"><div class="empty">아직 저장된 기록이 없습니다. 평가 일지에서 저장 후 다시 확인하세요.</div></div>';
+    return;
+  }
+
+  const sorted = records.slice().sort((a,b) => a.date.localeCompare(b.date));
+  const dates  = sorted.map(r => r.date);
+
+  /* ── 1. 항목별 순위 추이 차트 ── */
+  const chartCard = document.createElement('div');
+  chartCard.className = 'card';
+  chartCard.innerHTML = `
+    <div class="card-title">항목별 순위 추이 <span style="font-size:11px;color:var(--text3);font-weight:400">(낮을수록 상위)</span></div>
+    <div class="chart-wrap"><canvas id="trend-chart" role="img" aria-label="청록 헌장 9개 항목의 날짜별 순위 변화 꺾은선 차트"></canvas></div>
+  `;
+  main.appendChild(chartCard);
+
+  const datasets = ITEMS.map((item, ii) => {
+    const data = sorted.map(r => {
+      if (!r.ranking) return null;
+      const found = r.ranking.find(x => x.id === item.id);
+      return found ? found.rank : null;
+    });
+    return {
+      label: item.name,
+      data,
+      borderColor: PALETTE[ii],
+      backgroundColor: PALETTE[ii] + '22',
+      borderWidth: 1.5,
+      pointRadius: 4,
+      pointHoverRadius: 6,
+      tension: 0.3,
+      borderDash: ii >= 5 ? [4,3] : [],
+    };
+  });
+
+  new Chart(document.getElementById('trend-chart'), {
+    type: 'line',
+    data: { labels: dates, datasets },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: ctx => `${ctx.dataset.label}: ${ctx.parsed.y}위`,
+          }
+        }
+      },
+      scales: {
+        y: {
+          reverse: true,
+          min: 1, max: 9,
+          ticks: { stepSize: 1, callback: v => `${v}위`, color: '#a8a29a', font:{size:11} },
+          grid: { color: 'rgba(0,0,0,0.05)' },
+        },
+        x: {
+          ticks: { color: '#a8a29a', font:{size:11}, maxRotation: 45 },
+          grid: { display: false },
+        }
+      }
+    }
+  });
+
+  /* custom legend */
+  const legend = document.createElement('div');
+  legend.style.cssText = 'display:flex;flex-wrap:wrap;gap:10px;margin-top:12px;';
+  ITEMS.forEach((item,ii) => {
+    legend.innerHTML += `<span style="display:flex;align-items:center;gap:4px;font-size:11px;color:var(--text2)">
+      <span style="width:16px;height:2px;background:${PALETTE[ii]};display:inline-block;border-radius:1px"></span>${item.name}
+    </span>`;
+  });
+  chartCard.appendChild(legend);
+
+  /* ── 2. 날짜별 히트맵 테이블 ── */
+  if (sorted.length >= 2) {
+    const hmCard = document.createElement('div');
+    hmCard.className = 'card';
+
+    const recentDates = dates.slice(-8);
+    const recentRecs  = sorted.slice(-8);
+
+    let thead = `<tr><th>항목</th>${recentDates.map(d => `<th>${d.slice(5)}</th>`).join('')}</tr>`;
+    let tbody = ITEMS.map(item => {
+      const cells = recentRecs.map(r => {
+        if (!r.ranking) return '<td></td>';
+        const found = r.ranking.find(x => x.id === item.id);
+        const rank  = found ? found.rank : '-';
+        const style = typeof rank === 'number' ? rankColor(rank) : { bg:'', color:'var(--text3)' };
+        return `<td><div class="rank-cell" style="background:${style.bg};color:${style.color}">${rank}</div></td>`;
+      }).join('');
+      return `<tr><td class="item-name">${item.name}</td>${cells}</tr>`;
+    }).join('');
+
+    hmCard.innerHTML = `
+      <div class="card-title">날짜별 순위 히트맵 <span style="font-size:11px;color:var(--text3);font-weight:400">(최근 8회)</span></div>
+      <div class="heatmap-scroll"><table><thead>${thead}</thead><tbody>${tbody}</tbody></table></div>
+    `;
+    main.appendChild(hmCard);
+  }
+
+  /* ── 3. 최근 기록 목록 ── */
+  const listCard = document.createElement('div');
+  listCard.className = 'card';
+  listCard.innerHTML = `<div class="card-title">최근 기록</div>`;
+
+  sorted.slice().reverse().slice(0, 10).forEach(r => {
+    const good = (r.ranking || []).filter(x => x.zone === 'good');
+    const bad  = (r.ranking || []).filter(x => x.zone === 'bad');
+    const row  = document.createElement('div');
+    row.className = 'rec-row';
+    row.innerHTML = `
+      <div class="rec-date">${r.date}</div>
+      <div>
+        ${r.title ? `<div class="rec-title">${r.title}</div>` : ''}
+        <div class="chips">
+          ${good.map(g => `<span class="chip chip-good">${g.rank}. ${g.name}</span>`).join('')}
+          ${bad.map(b =>  `<span class="chip chip-bad">${b.rank}. ${b.name}</span>`).join('')}
+        </div>
+      </div>
+    `;
+    listCard.appendChild(row);
+  });
+  main.appendChild(listCard);
+}
+
+loadRecords().then(renderAll);
+</script>
+</body>
+</html>
