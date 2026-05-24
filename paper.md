@@ -22,6 +22,7 @@
 ---
 
 ## Vision
+
 - [2023-03] [Vision Transformer with Quadrangle Attention](https://arxiv.org/abs/2303.15105?utm_source=copilot.com) 
   - 고정된 window attention을 일반화한 Quadrangle Attention(QA) 기반의 Q-Former 아키텍처를 제안함.
   - 다양한 크기·형태·방향의 객체에 적응적으로 attention 영역을 생성하여 이미지 분류, 객체 탐지, 의미 분할, 포즈 추정 등 여러 비전 태스크에서 성능 향상을 달성함.
@@ -69,6 +70,12 @@
 - [2024-11-29] [A Survey on Multimodal Large Language Models](https://arxiv.org/abs/2306.13549)
   - GPT-4V 이후 급격히 발전한 멀티모달 LLM 연구를 종합적으로 정리한 서베이 논문
   - 아키텍처, 학습 전략, 평가, 확장 방향 논의
+
+- [2024-09] [Efficient Visual-Language Alignment of the Q-Former](https://arxiv.org/abs/2410.09489?utm_source=copilot.com)
+  - BLIP-2, InstructBLIP에서 사용되는 Q-Former의 효율적 파인튜닝(PEFT) 연구
+  - 전체 파라미터의 2% 미만만 학습해도 풀 파인튜닝과 유사한 성능 달성
+  - AdaLoRA 기법으로 Q-Former 내부 서브레이어 중요도 분석
+  - Self-attention 레이어가 시각-언어 추론에서 핵심적 역할을 한다는 결과
 
 ---
 
