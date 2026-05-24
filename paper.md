@@ -22,6 +22,10 @@
 ---
 
 ## Vision
+- [2023-03] [Vision Transformer with Quadrangle Attention](https://arxiv.org/abs/2303.15105?utm_source=copilot.com) 
+  - 고정된 window attention을 일반화한 Quadrangle Attention(QA) 기반의 Q-Former 아키텍처를 제안함.
+  - 다양한 크기·형태·방향의 객체에 적응적으로 attention 영역을 생성하여 이미지 분류, 객체 탐지, 의미 분할, 포즈 추정 등 여러 비전 태스크에서 성능 향상을 달성함.
+  - learnable transformation matrix를 활용해 유연한 receptive field를 형성하고, 기존 shifted window 방식 대비 더 풍부한 문맥 정보를 학습할 수 있음을 보임.
 
 - [Segment Anything](https://arxiv.org/abs/2304.02643)
   - Meta의 범용 segmentation foundation model
@@ -69,6 +73,11 @@
 ---
 
 ## Psychology & Bias
+
+- [2025/2026] [The “Web Browser” of the Collective Unconscious: The Mirror and Oracle of Generative AI](https://link.springer.com/article/10.1007/s12115-026-01193-1?utm_source=copilot.com)
+  - 생성형 AI를 집단무의식의 거울·오라클로 해석
+  - Midjourney 같은 이미지 생성 AI가 상징적 어휘를 재구성하며 새로운 의미를 창출
+  - 윤리적 문제(데이터 편향, 저작권, 신뢰성) 논의
 
 - [2025-12-11] [The Algorithmic Unconscious: Structural Mechanisms and Implicit Biases in LLMs](https://hal.science/hal-2025)
   - 토큰화·어텐션·정렬 과정에서 발생하는 구조적 편향 분석
