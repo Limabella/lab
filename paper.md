@@ -46,6 +46,8 @@
 
 ## Multimodal AI
 
+# 참고 논문 링크 모음
+
 - [2026-05-18] [Nous Research — Token Superposition](https://nousresearch.com/token-superposition?utm_source=chatgpt.com)
   - Token Superposition Training(TST) 공식 기술 설명
   - sparse activation 및 representation overlap 개념 설명
@@ -61,6 +63,11 @@
   - ICLR 2026 발표
   - 멀티모달 시계열 foundation model Aurora 제안
   - 텍스트·이미지·시계열을 결합한 범용 예측 구조
+
+
+- [2026-01-18] [HEART: A Unified Benchmark for Assessing Humans and LLMs in Emotional Support Dialogue](https://arxiv.org/abs/2601.19922?utm_source=copilot.com)
+  - 인간과 LLM을 동일한 감정 지원 대화 상황에 놓고 비교하는 벤치마크
+  - Human Alignment, Empathic Responsiveness, Attunement, Resonance, Task-Following 등 5가지 평가 기준 제시
 
 - [2025-09-30] [90% Faster, 100% Code-Free: MLLM-Driven Zero-Code 3D Game Development](https://arxiv.org/abs/2509.26161?utm_source=chatgpt.com)
   - 자연어 요구사항으로부터 코딩 없이 실행 가능한 3D 게임을 생성하는 멀티 에이전트 프레임워크 UniGen 제안
@@ -95,6 +102,11 @@
   - 한국심리학회지
   - 공감과 공격성의 간접 관계 분석
   - 사이코패시·사디즘 매개효과 확인
+- [2023] [공감과 공격성의 관계: 어두운 4요소 성격의 매개효과](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003316966&utm_source=copilot.com)
+  - 공감(Empathy)이 공격성(Aggression)에 미치는 영향을 어두운 성격 요인(Dark Tetrad: 마키아벨리즘, 나르시시즘, 사이코패시, 사디즘)을 매개로 분석
+  - 구조방정식 모형(SEM)을 통해 공감 → Dark Tetrad → 공격성이라는 간접 경로 규명
+  - 공감 수준이 높을수록 사이코패시·사디즘 경로가 약화되어 공격성이 줄어드는 효과 확인
+
 
 - [2014-02-01] [Narcissism in the Modern World](https://doi.org/10.1080/14753634.2014.894225)
   - Pat MacDonald
