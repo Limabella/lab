@@ -46,6 +46,12 @@
 
 ## Multimodal AI
 
+- [2026-05-18] [Multi-emotion and intensity-driven response generation for richer multimodal dialogue](https://www.nature.com/articles/s41598-026-41034-z?utm_source=copilot.com)
+  - 입력 문장의 감정 강도와 종류를 인식해 다층적 반응을 생성하는 방법 제안
+  - 표층 반응과 심층 상태를 분리해 조정하는 구조 ("양파 로직"과 유사)
+  - 감정 벡터 기반으로 멀티모달 대화 시스템의 풍부한 반응을 구현
+
+
 - [2026-05-18] [Nous Research — Token Superposition](https://nousresearch.com/token-superposition?utm_source=chatgpt.com)
   - Token Superposition Training(TST) 공식 기술 설명
   - sparse activation 및 representation overlap 개념 설명
@@ -95,6 +101,11 @@
   - 한국심리학회지
   - 공감과 공격성의 간접 관계 분석
   - 사이코패시·사디즘 매개효과 확인
+- [2023] [공감과 공격성의 관계: 어두운 4요소 성격의 매개효과](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003316966&utm_source=copilot.com)
+  - 공감(Empathy)이 공격성(Aggression)에 미치는 영향을 어두운 성격 요인(Dark Tetrad: 마키아벨리즘, 나르시시즘, 사이코패시, 사디즘)을 매개로 분석
+  - 구조방정식 모형(SEM)을 통해 공감 → Dark Tetrad → 공격성이라는 간접 경로 규명
+  - 공감 수준이 높을수록 사이코패시·사디즘 경로가 약화되어 공격성이 줄어드는 효과 확인
+
 
 - [2014-02-01] [Narcissism in the Modern World](https://doi.org/10.1080/14753634.2014.894225)
   - Pat MacDonald
