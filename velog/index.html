@@ -1,529 +1,826 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>청록(靑錄) 헌장 평가 일지</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-:root {
-  --bg: #f5f4f0;
-  --surface-top: #ffffff;
-  --surface-bot: #e8e6e0;
-  --border: #ddd9d0;
-  --border2: #bfb9ae;
-  --text: #1c1a17;
-  --text2: #6b665e;
-  --text3: #a8a29a;
-  --teal: #1D9E75;
-  --teal-bg: #E1F5EE;
-  --teal-dk: #085041;
-  --gray-bg: #e2dfd7;
-  --gray-dk: #5f5a52;
-  --divider: #c9c4ba;
-  --rank-w: 32px;
-  --card-h: 72px;
-  --r: 10px;
-  --r-sm: 6px;
-}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>청록(靑錄) 헌장 평가 일지</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&family=Noto+Sans+KR:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f5f4f0;
+        --sur: #ffffff;
+        --sur2: #eeebe4;
+        --bd: #ddd9d0;
+        --bd2: #bfb9ae;
+        --tx: #1c1a17;
+        --tx2: #6b665e;
+        --tx3: #a8a29a;
+        --teal: #1d9e75;
+        --teal-bg: #e1f5ee;
+        --teal-dk: #085041;
+        --r: 10px;
+        --rs: 6px;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Noto Sans KR", sans-serif;
+        background: var(--bg);
+        color: var(--tx);
+        min-height: 100vh;
+      }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+      /* header */
+      header {
+        background: var(--sur);
+        border-bottom: 1px solid var(--bd);
+        padding: 15px 32px;
+        display: flex;
+        align-items: baseline;
+        gap: 14px;
+      }
+      header h1 {
+        font-family: "Noto Serif KR", serif;
+        font-size: 19px;
+        font-weight: 600;
+        letter-spacing: -0.2px;
+      }
+      header .sub {
+        font-size: 12px;
+        color: var(--tx3);
+      }
+      header nav {
+        margin-left: auto;
+        display: flex;
+        gap: 8px;
+      }
+      header nav a {
+        font-size: 12px;
+        color: var(--teal);
+        text-decoration: none;
+        border: 1px solid var(--teal);
+        padding: 4px 10px;
+        border-radius: var(--rs);
+      }
+      header nav a:hover {
+        background: var(--teal-bg);
+      }
 
-body {
-  font-family: 'Noto Sans KR', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  min-height: 100vh;
-}
+      /* layout */
+      .layout {
+        display: flex;
+        gap: 24px;
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 28px 20px 60px;
+        align-items: flex-start;
+      }
 
-header {
-  background: #fff;
-  border-bottom: 1px solid var(--border);
-  padding: 16px 32px;
-  display: flex;
-  align-items: baseline;
-  gap: 14px;
-}
-header h1 {
-  font-family: 'Noto Serif KR', serif;
-  font-size: 19px;
-  font-weight: 600;
-}
-header span { font-size: 12px; color: var(--text3); }
-header a {
-  margin-left: auto;
-  font-size: 12px;
-  color: var(--teal);
-  text-decoration: none;
-  border: 1px solid var(--teal);
-  padding: 4px 10px;
-  border-radius: var(--r-sm);
-}
-header a:hover { background: var(--teal-bg); }
+      /* sidebar */
+      .side {
+        flex: 0 0 188px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        position: sticky;
+        top: 24px;
+      }
+      .side label {
+        font-size: 11px;
+        color: var(--tx3);
+        display: block;
+        margin-bottom: 3px;
+      }
+      .side input {
+        width: 100%;
+        padding: 7px 10px;
+        border: 1px solid var(--bd);
+        border-radius: var(--rs);
+        font-size: 13px;
+        font-family: "Noto Sans KR", sans-serif;
+        background: var(--sur);
+        color: var(--tx);
+      }
+      .side input:focus {
+        outline: none;
+        border-color: var(--teal);
+      }
+      .btn-save {
+        width: 100%;
+        padding: 9px;
+        background: var(--teal);
+        color: #fff;
+        border: none;
+        border-radius: var(--rs);
+        font-size: 13px;
+        font-weight: 500;
+        font-family: "Noto Sans KR", sans-serif;
+        cursor: pointer;
+        transition: background 0.12s;
+      }
+      .btn-save:hover {
+        background: #178c64;
+      }
+      .btn-save:disabled {
+        background: var(--bd2);
+        cursor: not-allowed;
+      }
+      .btn-reset {
+        width: 100%;
+        padding: 7px;
+        background: transparent;
+        color: var(--tx2);
+        border: 1px solid var(--bd);
+        border-radius: var(--rs);
+        font-size: 12px;
+        font-family: "Noto Sans KR", sans-serif;
+        cursor: pointer;
+      }
+      .btn-reset:hover {
+        background: var(--sur2);
+      }
+      .stat {
+        font-size: 11px;
+        padding: 7px 10px;
+        border-radius: var(--rs);
+        display: none;
+        line-height: 1.6;
+      }
+      .stat.ok {
+        display: block;
+        background: var(--teal-bg);
+        color: var(--teal-dk);
+      }
+      .stat.err {
+        display: block;
+        background: #faece7;
+        color: #712b13;
+      }
+      .side-note {
+        font-size: 11px;
+        color: var(--tx3);
+        line-height: 1.7;
+        background: var(--sur2);
+        border-radius: var(--rs);
+        padding: 10px 11px;
+      }
 
-.layout {
-  display: flex;
-  gap: 28px;
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 28px 20px 60px;
-  align-items: flex-start;
-}
+      /* board */
+      .board-col {
+        flex: 1;
+        min-width: 0;
+      }
+      .zone-hint {
+        font-size: 11px;
+        color: var(--tx3);
+        margin-bottom: 6px;
+      }
 
-/* ── Left: controls ── */
-.sidebar {
-  flex: 0 0 200px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  position: sticky;
-  top: 28px;
-}
-.sidebar label {
-  font-size: 11px;
-  color: var(--text3);
-  display: block;
-  margin-bottom: 3px;
-}
-.sidebar input {
-  width: 100%;
-  padding: 7px 10px;
-  border: 1px solid var(--border);
-  border-radius: var(--r-sm);
-  font-size: 13px;
-  font-family: 'Noto Sans KR', sans-serif;
-  background: #fff;
-  color: var(--text);
-}
-.sidebar input:focus { outline: none; border-color: var(--teal); }
-.btn-save {
-  width: 100%;
-  padding: 9px;
-  background: var(--teal);
-  color: #fff;
-  border: none;
-  border-radius: var(--r-sm);
-  font-size: 13px;
-  font-weight: 500;
-  font-family: 'Noto Sans KR', sans-serif;
-  cursor: pointer;
-  transition: background 0.12s;
-}
-.btn-save:hover { background: #178c64; }
-.btn-save:disabled { background: var(--border2); cursor: not-allowed; }
-.btn-reset {
-  width: 100%;
-  padding: 7px;
-  background: transparent;
-  color: var(--text2);
-  border: 1px solid var(--border);
-  border-radius: var(--r-sm);
-  font-size: 12px;
-  font-family: 'Noto Sans KR', sans-serif;
-  cursor: pointer;
-}
-.btn-reset:hover { background: var(--surface-bot); }
+      .lst {
+        border-radius: var(--r);
+        overflow: hidden;
+        border: 1px solid var(--bd);
+      }
 
-.status {
-  font-size: 11px;
-  padding: 7px 10px;
-  border-radius: var(--r-sm);
-  display: none;
-  line-height: 1.5;
-}
-.status.ok  { display: block; background: var(--teal-bg); color: var(--teal-dk); }
-.status.err { display: block; background: #FAECE7; color: #712B13; }
+      /* row */
+      .irow {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid var(--bd);
+        cursor: grab;
+        transition:
+          background 0.1s,
+          box-shadow 0.1s,
+          opacity 0.1s;
+        user-select: none;
+      }
+      .irow:last-child {
+        border-bottom: none;
+      }
+      .irow.tp {
+        background: var(--sur);
+      }
+      .irow.bt {
+        background: var(--sur2);
+      }
 
-.score-summary {
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: var(--r);
-  padding: 12px;
-}
-.score-summary .s-label { font-size: 11px; color: var(--text3); margin-bottom: 6px; }
-.score-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
-.score-name { font-size: 11px; color: var(--text2); }
-.score-val  { font-size: 11px; font-weight: 500; color: var(--text); }
+      /* drag state */
+      .irow.dragging {
+        opacity: 0.4;
+        cursor: grabbing;
+      }
+      .irow.drag-over {
+        box-shadow: inset 0 2px 0 var(--teal);
+      }
 
-/* ── Right: puzzle board ── */
-.board-wrap { flex: 1; min-width: 0; }
+      /* drag handle */
+      .drag-handle {
+        width: 24px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: stretch;
+        cursor: grab;
+        color: var(--tx3);
+        font-size: 12px;
+        opacity: 0.4;
+        transition: opacity 0.1s;
+      }
+      .irow:hover .drag-handle {
+        opacity: 0.8;
+      }
 
-.zone-tag {
-  font-size: 11px;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-bottom: 6px;
-  color: var(--text3);
-}
-.dot-tag {
-  width: 8px; height: 8px; border-radius: 50%;
-}
-.dot-tag.good { background: var(--teal); }
-.dot-tag.bad  { background: var(--border2); }
+      .rk-col {
+        width: 34px;
+        flex-shrink: 0;
+        font-size: 12px;
+        font-variant-numeric: tabular-nums;
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 1px solid var(--bd);
+      }
+      .irow.tp .rk-col {
+        color: var(--teal);
+        font-weight: 500;
+      }
+      .irow.bt .rk-col {
+        color: var(--tx3);
+      }
 
-.board {
-  border-radius: var(--r);
-  overflow: hidden;
-  border: 1px solid var(--border);
-}
+      .card-body {
+        flex: 1;
+        padding: 10px 13px;
+        min-width: 0;
+      }
+      .card-name {
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--tx);
+        margin-bottom: 2px;
+      }
+      .card-desc {
+        font-size: 11px;
+        color: var(--tx3);
+        line-height: 1.4;
+      }
+      .badge {
+        font-size: 10px;
+        padding: 1px 7px;
+        border-radius: 20px;
+        margin-left: 6px;
+        vertical-align: middle;
+      }
+      .bg {
+        background: var(--teal-bg);
+        color: var(--teal-dk);
+      }
+      .bbd {
+        background: #e2dfd7;
+        color: #5f5a52;
+      }
 
-/* top zone: white */
-.zone-top {
-  background: var(--surface-top);
-  border-bottom: 2px dashed var(--divider);
-}
-/* bottom zone: gray */
-.zone-bot {
-  background: var(--surface-bot);
-}
+      .arr-col {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        padding: 7px 8px;
+        flex-shrink: 0;
+      }
+      .arr {
+        width: 28px;
+        height: 28px;
+        border-radius: var(--rs);
+        border: 1px solid var(--bd);
+        background: transparent;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--tx2);
+        font-size: 14px;
+        line-height: 1;
+        transition:
+          background 0.1s,
+          border-color 0.1s;
+      }
+      .arr:hover:not(:disabled) {
+        background: var(--sur2);
+        border-color: var(--bd2);
+      }
+      .arr:active:not(:disabled) {
+        transform: scale(0.9);
+      }
+      .arr:disabled {
+        opacity: 0.18;
+        cursor: default;
+        pointer-events: none;
+      }
 
-.zone-inner {
-  padding: 8px 12px;
-  min-height: 10px;
-}
+      /* divider */
+      .dvb {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 5px 12px;
+        border-bottom: 1px solid var(--bd);
+        background: var(--bg);
+        /* 드래그 타깃 아님 */
+        pointer-events: none;
+      }
+      .dvl {
+        flex: 1;
+        height: 1px;
+        background: var(--bd2);
+      }
+      .dvt {
+        font-size: 10px;
+        color: var(--tx3);
+        white-space: nowrap;
+      }
 
-/* Divider label */
-.divider-label {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 6px 16px;
-  background: var(--bg);
-  border-top: 1px solid var(--divider);
-  border-bottom: 1px solid var(--divider);
-}
-.divider-line { flex: 1; height: 1px; background: var(--divider); }
-.divider-text { font-size: 10px; color: var(--text3); white-space: nowrap; }
+      /* hint */
+      .drag-hint {
+        font-size: 11px;
+        color: var(--tx3);
+        text-align: center;
+        margin-top: 7px;
+      }
 
-/* rank axis on left */
-.rank-row {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  margin-bottom: 5px;
-  position: relative;
-}
-.rank-row:last-child { margin-bottom: 0; }
+      /* history */
+      .hist-wrap {
+        margin-top: 1.5rem;
+      }
+      .hist-title {
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--tx2);
+        margin-bottom: 8px;
+      }
+      .hist-box {
+        background: var(--sur);
+        border: 1px solid var(--bd);
+        border-radius: var(--r);
+        overflow: hidden;
+      }
+      .hrow {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 9px 14px;
+        border-bottom: 1px solid var(--bd);
+        font-size: 11px;
+      }
+      .hrow:last-child {
+        border-bottom: none;
+      }
+      .hd {
+        min-width: 86px;
+        color: var(--tx3);
+        line-height: 1.7;
+      }
+      .htt {
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--tx);
+        margin-bottom: 4px;
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3px;
+      }
+      .chip {
+        padding: 1px 7px;
+        border-radius: 20px;
+        font-size: 10px;
+      }
+      .cg {
+        background: var(--teal-bg);
+        color: var(--teal-dk);
+      }
+      .cb {
+        background: #e2dfd7;
+        color: #5f5a52;
+      }
+      .hempty {
+        padding: 14px;
+        font-size: 12px;
+        color: var(--tx3);
+      }
 
-.rank-num {
-  width: var(--rank-w);
-  flex-shrink: 0;
-  font-size: 11px;
-  color: var(--text3);
-  text-align: center;
-  font-variant-numeric: tabular-nums;
-  padding-top: 4px;
-}
+      @media (max-width: 600px) {
+        .layout {
+          flex-direction: column;
+          padding: 14px 12px 48px;
+        }
+        .side {
+          flex: none;
+          width: 100%;
+          position: static;
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+        .side input {
+          width: auto;
+          flex: 1;
+        }
+        .btn-save,
+        .btn-reset {
+          width: auto;
+          flex: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>청록(靑錄) 헌장 평가 일지</h1>
+      <span class="sub">9개 항목을 순위로 정렬하고 기록하세요</span>
+      <nav>
+        <a href="history.html">기록 히스토리 →</a>
+      </nav>
+    </header>
 
-/* card */
-.card {
-  flex: 1;
-  min-height: var(--card-h);
-  border-radius: var(--r-sm);
-  border: 1px solid var(--border);
-  background: inherit;
-  padding: 10px 14px;
-  cursor: grab;
-  user-select: none;
-  transition: border-color 0.12s, box-shadow 0.12s, transform 0.08s;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.card:hover { border-color: var(--border2); }
-.card.dragging { opacity: 0.35; cursor: grabbing; transform: scale(0.97); }
-.card.drag-over { border-color: var(--teal); box-shadow: 0 0 0 2px rgba(29,158,117,0.2); }
-
-.zone-top .card { background: #fff; }
-.zone-bot .card { background: var(--gray-bg); }
-
-.card-orb {
-  width: 36px; height: 36px;
-  border-radius: 50%;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 13px;
-  font-weight: 500;
-  border: 1.5px solid var(--border2);
-}
-.zone-top .card-orb { background: var(--teal-bg); color: var(--teal-dk); border-color: #5DCAA5; }
-.zone-bot .card-orb { background: #d3d0c8; color: var(--gray-dk); border-color: #b0aba2; }
-
-.card-text { flex: 1; min-width: 0; }
-.card-name { font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 2px; }
-.card-desc { font-size: 11px; color: var(--text3); line-height: 1.4; }
-
-.card-badge {
-  font-size: 10px;
-  padding: 2px 7px;
-  border-radius: 20px;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.zone-top .card-badge { background: var(--teal-bg); color: var(--teal-dk); }
-.zone-bot .card-badge { background: #ccc9c1; color: var(--gray-dk); }
-
-/* ghost placeholder */
-.ghost-placeholder {
-  flex: 1;
-  min-height: var(--card-h);
-  border-radius: var(--r-sm);
-  border: 1.5px dashed var(--teal);
-  background: rgba(29,158,117,0.05);
-}
-
-/* hint */
-.drag-hint {
-  text-align: center;
-  font-size: 11px;
-  color: var(--text3);
-  margin-top: 8px;
-}
-</style>
-</head>
-<body>
-
-<header>
-  <h1>청록(靑錄) 헌장 평가</h1>
-  <span>9개 항목을 드래그해 오늘의 순위를 정하세요</span>
-  <a href="history.html">기록 히스토리 →</a>
-</header>
-
-<div class="layout">
-
-  <!-- Sidebar -->
-  <div class="sidebar">
-    <div>
-      <label>기록일</label>
-      <input type="date" id="rec-date">
-    </div>
-    <div>
-      <label>글 제목 (선택)</label>
-      <input type="text" id="rec-title" placeholder="오늘 글 제목">
-    </div>
-    <button class="btn-save" id="btn-save" onclick="saveRecord()">저장</button>
-    <button class="btn-reset" onclick="resetOrder()">순서 초기화</button>
-    <div class="status" id="status"></div>
-
-    <div class="score-summary" id="score-summary"></div>
-  </div>
-
-  <!-- Board -->
-  <div class="board-wrap">
-    <div class="zone-tag">
-      <span class="dot-tag good"></span> 1~5위 — 잘 활용 (수정 불필요)
-    </div>
-
-    <div class="board">
-      <!-- top zone: ranks 1-5 -->
-      <div class="zone-top" id="zone-top">
-        <div class="zone-inner" id="inner-top"></div>
+    <div class="layout">
+      <!-- 사이드바 -->
+      <div class="side">
+        <div>
+          <label>기록일</label>
+          <input type="date" id="rec-date" />
+        </div>
+        <div>
+          <label>글 제목 (선택)</label>
+          <input type="text" id="rec-title" placeholder="오늘 글 제목" />
+        </div>
+        <button class="btn-save" id="btn-save" onclick="saveRecord()">
+          저장
+        </button>
+        <button class="btn-reset" onclick="resetOrder()">순서 초기화</button>
+        <div class="stat" id="stat"></div>
+        <div class="side-note">
+          드래그하거나 ↑ ↓ 버튼으로 순위를 조정하세요.<br />
+          1~5위 → 양호 (흰색)<br />
+          6~9위 → 개선 필요 (회색)<br /><br />
+          저장하면 <code>data/records.json</code>에 누적됩니다.
+        </div>
       </div>
 
-      <!-- divider -->
-      <div class="divider-label">
-        <div class="divider-line"></div>
-        <span class="divider-text">▲ 잘 활용 &nbsp;|&nbsp; 개선 필요 ▼</span>
-        <div class="divider-line"></div>
-      </div>
+      <!-- 보드 -->
+      <div class="board-col">
+        <div class="zone-hint">1~5위 양호 &nbsp;/&nbsp; 6~9위 개선 필요</div>
+        <div class="lst" id="lst"></div>
+        <div class="drag-hint">드래그 또는 ↑ ↓ 버튼으로 순위를 조정하세요</div>
 
-      <!-- bot zone: ranks 6-9 -->
-      <div class="zone-bot" id="zone-bot">
-        <div class="zone-inner" id="inner-bot"></div>
+        <div class="hist-wrap">
+          <div class="hist-title">최근 기록</div>
+          <div class="hist-box" id="hist"></div>
+        </div>
       </div>
     </div>
 
-    <div class="drag-hint">↕ 드래그해서 순위를 변경하세요</div>
-  </div>
+    <script>
+      var ITEMS = [
+        {
+          id: "structure",
+          name: "글 구조",
+          desc: "연구형 65% / 개발형 30% / 블로그형 5%",
+        },
+        {
+          id: "logic",
+          name: "논리적 흐름",
+          desc: "요약→문제의식→원인분석→해결책",
+        },
+        { id: "ai", name: "AI 활용 방식", desc: "맥락 없는 붙여넣기 금지" },
+        { id: "data", name: "정량적 데이터화", desc: "시각화·수치 근거 활용" },
+        { id: "tone", name: "감정 톤", desc: "긍정·중립·비판적 어휘 균형" },
+        {
+          id: "problem",
+          name: "문제의식",
+          desc: "심리학적 연결·사회적 맥락 반영",
+        },
+        { id: "politics", name: "정치학", desc: "대통령·정당 분석 최소화" },
+        {
+          id: "engineering",
+          name: "공학",
+          desc: "심리학적 관찰 + 공학 구현 한 쌍",
+        },
+        { id: "citation", name: "인용", desc: "APA 방식, 적절한 비중" },
+      ];
 
-</div>
+      var order = ITEMS.map(function (i) {
+        return i.id;
+      });
 
-<script>
-const ITEMS = [
-  { id:'structure',   name:'글 구조',       desc:'연구형 65% / 개발형 30% / 블로그형 5% 균형' },
-  { id:'logic',       name:'논리적 흐름',    desc:'요약→문제의식→원인분석→해결책 구성력' },
-  { id:'ai',          name:'AI 활용 방식',   desc:'맥락 없는 AI활용 금지 규칙 준수' },
-  { id:'data',        name:'정량적 데이터화', desc:'시각화·수치 근거 활용' },
-  { id:'tone',        name:'감정 톤',        desc:'긍정·중립·비판적 어휘 균형' },
-  { id:'problem',     name:'문제의식',       desc:'심리학적 연결·사회적 맥락 반영' },
-  { id:'politics',    name:'정치학',         desc:'인사·정당 분석 최소화' },
-  { id:'engineering', name:'공학',           desc:'심리학적 관찰 + 공학 구현 한 쌍' },
-  { id:'citation',    name:'인용',           desc:'APA 방식, 적절한 비중' },
-];
+      function getItem(id) {
+        for (var i = 0; i < ITEMS.length; i++) {
+          if (ITEMS[i].id === id) return ITEMS[i];
+        }
+        return null;
+      }
 
-let order = ITEMS.map(i => i.id);
-let dragId = null;
-let dragOverId = null;
+      /* ── drag and drop state ── */
+      var dragSrcIdx = null;
 
-const ABBR = {
-  structure:'구조', logic:'흐름', ai:'AI', data:'Data',
-  tone:'톤', problem:'의식', politics:'정치', engineering:'공학', citation:'인용'
-};
+      function onDragStart(e, idx) {
+        dragSrcIdx = idx;
+        e.dataTransfer.effectAllowed = "move";
+        e.dataTransfer.setData("text/plain", idx);
+        /* slight delay before setting opacity (prevents Chrome flicker) */
+        setTimeout(function () {
+          var rows = document.querySelectorAll(".irow[data-idx]");
+          rows.forEach(function (r) {
+            if (parseInt(r.dataset.idx) === idx) r.classList.add("dragging");
+          });
+        }, 0);
+      }
 
-/* ── render ─────────────────────────── */
-function render() {
-  document.getElementById('inner-top').innerHTML = '';
-  document.getElementById('inner-bot').innerHTML = '';
+      function onDragOver(e, idx) {
+        e.preventDefault();
+        e.dataTransfer.dropEffect = "move";
+        /* show drag-over state */
+        document.querySelectorAll(".irow[data-idx]").forEach(function (r) {
+          r.classList.remove("drag-over");
+        });
+        var rows = document.querySelectorAll(".irow[data-idx]");
+        rows.forEach(function (r) {
+          if (parseInt(r.dataset.idx) === idx) r.classList.add("drag-over");
+        });
+      }
 
-  order.forEach((id, idx) => {
-    const item = ITEMS.find(i => i.id === id);
-    const rank = idx + 1;
-    const isTop = rank <= 5;
-    const zone = isTop ? 'top' : 'bot';
-    const inner = document.getElementById('inner-' + zone);
+      function onDragEnd() {
+        document.querySelectorAll(".irow[data-idx]").forEach(function (r) {
+          r.classList.remove("dragging", "drag-over");
+        });
+        dragSrcIdx = null;
+      }
 
-    const row = document.createElement('div');
-    row.className = 'rank-row';
+      function onDrop(e, targetIdx) {
+        e.preventDefault();
+        if (dragSrcIdx === null || dragSrcIdx === targetIdx) {
+          onDragEnd();
+          return;
+        }
 
-    const numEl = document.createElement('div');
-    numEl.className = 'rank-num';
-    numEl.textContent = rank;
+        /* reorder array */
+        var moved = order.splice(dragSrcIdx, 1)[0];
+        order.splice(targetIdx, 0, moved);
 
-    const card = document.createElement('div');
-    card.className = 'card';
-    card.draggable = true;
-    card.dataset.id = id;
-
-    const orb = document.createElement('div');
-    orb.className = 'card-orb';
-    orb.textContent = ABBR[id] || id.slice(0,2);
-
-    const txt = document.createElement('div');
-    txt.className = 'card-text';
-    txt.innerHTML = `<div class="card-name">${item.name}</div><div class="card-desc">${item.desc}</div>`;
-
-    const badge = document.createElement('div');
-    badge.className = 'card-badge';
-    badge.textContent = isTop ? '양호' : '개선';
-
-    card.appendChild(orb);
-    card.appendChild(txt);
-    card.appendChild(badge);
-
-    /* drag events */
-    card.addEventListener('dragstart', e => {
-      dragId = id;
-      setTimeout(() => card.classList.add('dragging'), 0);
-      e.dataTransfer.effectAllowed = 'move';
-    });
-    card.addEventListener('dragend', () => {
-      card.classList.remove('dragging');
-      dragId = null;
-      dragOverId = null;
-      render();
-    });
-    card.addEventListener('dragover', e => {
-      e.preventDefault();
-      if (dragId && dragId !== id) {
-        dragOverId = id;
+        onDragEnd();
         render();
       }
-    });
 
-    if (dragOverId === id && dragId && dragId !== id) {
-      card.classList.add('drag-over');
-    }
+      /* ── render ── */
+      function render() {
+        var lst = document.getElementById("lst");
+        lst.innerHTML = "";
 
-    card.addEventListener('drop', e => {
-      e.preventDefault();
-      if (!dragId || dragId === id) return;
-      const fromIdx = order.indexOf(dragId);
-      const toIdx   = order.indexOf(id);
-      order.splice(fromIdx, 1);
-      order.splice(toIdx, 0, dragId);
-      dragId = null;
-      dragOverId = null;
+        for (var idx = 0; idx < order.length; idx++) {
+          var id = order[idx];
+          var item = getItem(id);
+          var rank = idx + 1;
+          var isTop = rank <= 5;
+
+          /* divider line */
+          if (rank === 6) {
+            var dv = document.createElement("div");
+            dv.className = "dvb";
+            dv.innerHTML =
+              '<div class="dvl"></div><span class="dvt">▲ 양호 &nbsp;|&nbsp; 개선 필요 ▼</span><div class="dvl"></div>';
+            lst.appendChild(dv);
+          }
+
+          var row = document.createElement("div");
+          row.className = "irow " + (isTop ? "tp" : "bt");
+          row.setAttribute("draggable", "true");
+          row.dataset.idx = idx;
+
+          /* bind drag events (IIFE to capture idx) */
+          (function (i) {
+            row.addEventListener("dragstart", function (e) {
+              onDragStart(e, i);
+            });
+            row.addEventListener("dragover", function (e) {
+              onDragOver(e, i);
+            });
+            row.addEventListener("dragleave", function () {
+              row.classList.remove("drag-over");
+            });
+            row.addEventListener("dragend", onDragEnd);
+            row.addEventListener("drop", function (e) {
+              onDrop(e, i);
+            });
+          })(idx);
+
+          /* drag handle icon */
+          var handle = document.createElement("div");
+          handle.className = "drag-handle";
+          handle.innerHTML = "&#8942;&#8942;"; /* ⋮⋮ */
+          handle.title = "드래그로 이동";
+
+          /* ranking number */
+          var rk = document.createElement("div");
+          rk.className = "rk-col";
+          rk.textContent = rank;
+
+          /* card body */
+          var body = document.createElement("div");
+          body.className = "card-body";
+          body.innerHTML =
+            '<div class="card-name">' +
+            item.name +
+            '<span class="badge ' +
+            (isTop ? "bg" : "bbd") +
+            '">' +
+            (isTop ? "양호" : "개선") +
+            "</span>" +
+            "</div>" +
+            '<div class="card-desc">' +
+            item.desc +
+            "</div>";
+
+          /* button column (as is) */
+          var ac = document.createElement("div");
+          ac.className = "arr-col";
+
+          var up = document.createElement("button");
+          up.className = "arr";
+          up.setAttribute("aria-label", item.name + " 위로");
+          up.innerHTML = "&#8593;";
+          if (idx === 0) up.disabled = true;
+          (function (i) {
+            up.onclick = function (e) {
+              e.stopPropagation();
+              var t = order[i - 1];
+              order[i - 1] = order[i];
+              order[i] = t;
+              render();
+            };
+          })(idx);
+
+          var dn = document.createElement("button");
+          dn.className = "arr";
+          dn.setAttribute("aria-label", item.name + " 아래로");
+          dn.innerHTML = "&#8595;";
+          if (idx === order.length - 1) dn.disabled = true;
+          (function (i) {
+            dn.onclick = function (e) {
+              e.stopPropagation();
+              var t = order[i + 1];
+              order[i + 1] = order[i];
+              order[i] = t;
+              render();
+            };
+          })(idx);
+
+          ac.appendChild(up);
+          ac.appendChild(dn);
+
+          row.appendChild(handle);
+          row.appendChild(rk);
+          row.appendChild(body);
+          row.appendChild(ac);
+          lst.appendChild(row);
+        }
+      }
+
+      //* save / history (as is) */
+      async function saveRecord() {
+        var date = document.getElementById("rec-date").value;
+        var title = document.getElementById("rec-title").value.trim();
+        if (!date) {
+          setStat("날짜를 선택해 주세요.", "err");
+          return;
+        }
+
+        var ranking = [];
+        for (var i = 0; i < order.length; i++) {
+          var item = getItem(order[i]);
+          ranking.push({
+            rank: i + 1,
+            id: order[i],
+            name: item.name,
+            zone: i < 5 ? "good" : "bad",
+          });
+        }
+        var entry = {
+          date: date,
+          title: title,
+          ranking: ranking,
+          savedAt: new Date().toISOString(),
+        };
+
+        var btn = document.getElementById("btn-save");
+        btn.disabled = true;
+        btn.textContent = "저장 중...";
+
+        try {
+          var res = await fetch("/api/records", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(entry),
+          });
+          var json = await res.json();
+          if (json.ok) {
+            setStat("저장 완료 (누적 " + json.total + "개)", "ok");
+            loadHist();
+          } else {
+            setStat("저장 실패", "err");
+          }
+        } catch (e) {
+          setStat("서버 미연결 — python server.py 실행 확인", "err");
+        }
+
+        btn.disabled = false;
+        btn.textContent = "저장";
+      }
+
+      function setStat(msg, type) {
+        var el = document.getElementById("stat");
+        el.textContent = msg;
+        el.className = "stat " + type;
+        if (type === "ok")
+          setTimeout(function () {
+            el.className = "stat";
+          }, 3000);
+      }
+
+      function resetOrder() {
+        order = ITEMS.map(function (i) {
+          return i.id;
+        });
+        render();
+      }
+
+      async function loadHist() {
+        var el = document.getElementById("hist");
+        try {
+          var res = await fetch("/api/records");
+          var recs = await res.json();
+          if (!recs.length) {
+            el.innerHTML =
+              '<div class="hempty">아직 저장된 기록이 없습니다.</div>';
+            return;
+          }
+          var recent = recs.slice().reverse().slice(0, 8);
+          var html = "";
+          for (var i = 0; i < recent.length; i++) {
+            var r = recent[i];
+            var ranking = r.ranking || [];
+            var gc = "",
+              bc = "";
+            for (var j = 0; j < ranking.length; j++) {
+              var x = ranking[j];
+              if (x.zone === "good")
+                gc +=
+                  '<span class="chip cg">' + x.rank + ". " + x.name + "</span>";
+              else
+                bc +=
+                  '<span class="chip cb">' + x.rank + ". " + x.name + "</span>";
+            }
+            html +=
+              '<div class="hrow">' +
+              '<div class="hd">' +
+              r.date +
+              "</div>" +
+              "<div>" +
+              (r.title ? '<div class="htt">' + r.title + "</div>" : "") +
+              '<div class="chips">' +
+              gc +
+              bc +
+              "</div>" +
+              "</div>" +
+              "</div>";
+          }
+          el.innerHTML = html;
+        } catch (e) {
+          el.innerHTML =
+            '<div class="hempty">서버 미연결 — python server.py 실행 확인</div>';
+        }
+      }
+
+      /* ── 초기화 ── */
+      var today = new Date();
+      var pad = function (n) {
+        return String(n).padStart(2, "0");
+      };
+      document.getElementById("rec-date").value =
+        today.getFullYear() +
+        "-" +
+        pad(today.getMonth() + 1) +
+        "-" +
+        pad(today.getDate());
+
       render();
-      updateSummary();
-    });
-
-    row.appendChild(numEl);
-    row.appendChild(card);
-    inner.appendChild(row);
-  });
-
-  updateSummary();
-}
-
-/* ── score summary ───────────────────── */
-function updateSummary() {
-  const el = document.getElementById('score-summary');
-  el.innerHTML = `<div class="s-label">현재 순위 요약</div>` +
-    order.map((id, i) => {
-      const item = ITEMS.find(x => x.id === id);
-      const rank = i + 1;
-      const isTop = rank <= 5;
-      return `<div class="score-row">
-        <span class="score-name" style="color:${isTop ? 'var(--teal-dk)' : 'var(--gray-dk)'}">${rank}. ${item.name}</span>
-        <span class="score-val" style="color:${isTop ? 'var(--teal)' : 'var(--text3)'}">${isTop ? '●' : '○'}</span>
-      </div>`;
-    }).join('');
-}
-
-/* ── save ────────────────────────────── */
-async function saveRecord() {
-  const date  = document.getElementById('rec-date').value;
-  const title = document.getElementById('rec-title').value.trim();
-  if (!date) { setStatus('날짜를 선택해 주세요.', 'err'); return; }
-
-  const entry = {
-    date, title,
-    ranking: order.map((id, i) => ({
-      rank: i + 1,
-      id,
-      name: ITEMS.find(x => x.id === id).name,
-      zone: i < 5 ? 'good' : 'bad',
-    })),
-    savedAt: new Date().toISOString(),
-  };
-
-  const btn = document.getElementById('btn-save');
-  btn.disabled = true;
-  btn.textContent = '저장 중...';
-
-  try {
-    const res = await fetch('/api/records', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(entry),
-    });
-    const json = await res.json();
-    if (json.ok) {
-      setStatus(`저장 완료 (총 ${json.total}개 기록)`, 'ok');
-    } else {
-      setStatus('저장 실패', 'err');
-    }
-  } catch(e) {
-    setStatus('서버 연결 실패 — python server.py 실행 여부 확인', 'err');
-  } finally {
-    btn.disabled = false;
-    btn.textContent = '저장';
-  }
-}
-
-function setStatus(msg, type) {
-  const el = document.getElementById('status');
-  el.textContent = msg;
-  el.className = 'status ' + type;
-  if (type === 'ok') setTimeout(() => el.className = 'status', 3000);
-}
-
-function resetOrder() {
-  order = ITEMS.map(i => i.id);
-  render();
-}
-
-/* ── init ────────────────────────────── */
-const today = new Date();
-const pad = n => String(n).padStart(2, '0');
-document.getElementById('rec-date').value =
-  `${today.getFullYear()}-${pad(today.getMonth()+1)}-${pad(today.getDate())}`;
-
-render();
-</script>
-</body>
+      loadHist();
+    </script>
+  </body>
 </html>
