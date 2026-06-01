@@ -23,7 +23,7 @@
 
 ## Vision
 
-- [2023-03] [Vision Transformer with Quadrangle Attention](https://arxiv.org/abs/2303.15105?utm_source=copilot.com) 
+- [2023-03] [Vision Transformer with Quadrangle Attention](https://arxiv.org/abs/2303.15105?utm_source=copilot.com)
   - 고정된 window attention을 일반화한 Quadrangle Attention(QA) 기반의 Q-Former 아키텍처를 제안함.
   - 다양한 크기·형태·방향의 객체에 적응적으로 attention 영역을 생성하여 이미지 분류, 객체 탐지, 의미 분할, 포즈 추정 등 여러 비전 태스크에서 성능 향상을 달성함.
   - learnable transformation matrix를 활용해 유연한 receptive field를 형성하고, 기존 shifted window 방식 대비 더 풍부한 문맥 정보를 학습할 수 있음을 보임.
@@ -50,7 +50,6 @@
   - 입력 문장의 감정 강도와 종류를 인식해 다층적 반응을 생성하는 방법 제안
   - 표층 반응과 심층 상태를 분리해 조정하는 구조 ("양파 로직"과 유사)
   - 감정 벡터 기반으로 멀티모달 대화 시스템의 풍부한 반응을 구현
-
 
 - [2026-05-18] [Nous Research — Token Superposition](https://nousresearch.com/token-superposition?utm_source=chatgpt.com)
   - Token Superposition Training(TST) 공식 기술 설명
@@ -86,7 +85,6 @@
 ---
 
 ## Psychology & Bias
-
 - [2025/2026] [The “Web Browser” of the Collective Unconscious: The Mirror and Oracle of Generative AI](https://link.springer.com/article/10.1007/s12115-026-01193-1?utm_source=copilot.com)
   - 생성형 AI를 집단무의식의 거울·오라클로 해석
   - Midjourney 같은 이미지 생성 AI가 상징적 어휘를 재구성하며 새로운 의미를 창출
@@ -97,6 +95,15 @@
   - "알고리즘적 무의식" 개념 제안
   - LLM alignment와 bias 연구 참고용
 
+- [2025-10-18] [Reading Minds, Sparking Ideas: How Machiavellian Leaders Boost Team Creativity Through Cross-Understanding](https://www.mdpi.com/2076-3387/15/10/400)  
+  - 마키아벨리적 리더십이 팀 창의성을 촉진할 수 있음을 실증적으로 검증  
+  - **교차 이해(cross-understanding)**: 팀원들이 서로의 지식·관점·사고방식을 이해하는 과정이 창의성의 매개 역할  
+  - **과업 상호의존성(task interdependence)**: 팀 과제가 서로 긴밀히 연결될수록 리더의 긍정적 효과가 강화됨  
+  - 사회학습이론(Social Learning Theory)과 특성활성화이론(Trait Activation Theory)을 기반으로 분석  
+  - 중국 기술·제조·금융 기업의 86개 팀(379명)을 대상으로 다원적 설문조사 진행  
+  - 실무적 시사점: 조직은 마키아벨리적 리더의 야망을 혁신 목표에 맞추고, 교차 이해를 촉진하는 협업 구조를 설계해야 함  
+
+
 - [2025-03-01] [공감과 공격성의 관계: 어두운 4요소 성격의 매개효과](https://doi.org/10.0000/kjhp.2025.31.2.429)
   - 한국심리학회지
   - 공감과 공격성의 간접 관계 분석
@@ -105,7 +112,6 @@
   - 공감(Empathy)이 공격성(Aggression)에 미치는 영향을 어두운 성격 요인(Dark Tetrad: 마키아벨리즘, 나르시시즘, 사이코패시, 사디즘)을 매개로 분석
   - 구조방정식 모형(SEM)을 통해 공감 → Dark Tetrad → 공격성이라는 간접 경로 규명
   - 공감 수준이 높을수록 사이코패시·사디즘 경로가 약화되어 공격성이 줄어드는 효과 확인
-
 
 - [2014-02-01] [Narcissism in the Modern World](https://doi.org/10.1080/14753634.2014.894225)
   - Pat MacDonald
