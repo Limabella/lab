@@ -4,12 +4,11 @@
 실행: python server.py
 접속: http://localhost:8000
 """
-import json
-import os
+import json, os
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 from urllib.parse import urlparse
 
-DATA_FILE = os.path.join(os.path.dirname(__file__), "data", "records.json")
+DATA_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "records.json")
 
 
 def load_records():
@@ -27,44 +26,40 @@ def save_records(records):
 
 class Handler(SimpleHTTPRequestHandler):
     def log_message(self, fmt, *args):
-        print(f"  {self.address_string()} {fmt % args}")
+        print(f"  {self.address_string()}  {fmt % args}")
 
     def do_GET(self):
-        parsed = urlparse(self.path)
-        if parsed.path == "/api/records":
-            self._json_response(load_records())
+        if urlparse(self.path).path == "/api/records":
+            self._json(load_records())
         else:
             super().do_GET()
 
     def do_POST(self):
-        parsed = urlparse(self.path)
-        if parsed.path == "/api/records":
+        if urlparse(self.path).path == "/api/records":
             length = int(self.headers.get("Content-Length", 0))
-            body = json.loads(self.rfile.read(length))
-            records = load_records()
-            date = body.get("date")
-            idx = next((i for i, r in enumerate(records) if r["date"] == date), -1)
+            body   = json.loads(self.rfile.read(length))
+            recs   = load_records()
+            date   = body.get("date", "")
+            idx    = next((i for i, r in enumerate(recs) if r.get("date") == date), -1)
             if idx >= 0:
-                records[idx] = body
+                recs[idx] = body
             else:
-                records.append(body)
-            save_records(records)
-            self._json_response({"ok": True, "total": len(records)})
+                recs.append(body)
+            save_records(recs)
+            self._json({"ok": True, "total": len(recs)})
         else:
             self.send_error(404)
 
     def do_OPTIONS(self):
         self.send_response(200)
-        self._cors()
-        self.end_headers()
+        self._cors(); self.end_headers()
 
-    def _json_response(self, data):
+    def _json(self, data):
         payload = json.dumps(data, ensure_ascii=False).encode("utf-8")
         self.send_response(200)
         self.send_header("Content-Type", "application/json; charset=utf-8")
         self.send_header("Content-Length", str(len(payload)))
-        self._cors()
-        self.end_headers()
+        self._cors(); self.end_headers()
         self.wfile.write(payload)
 
     def _cors(self):
@@ -74,11 +69,15 @@ class Handler(SimpleHTTPRequestHandler):
 
 
 if __name__ == "__main__":
-    port = 8000
+    # server.py 위치(velog/)로 CWD 고정
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))  # ← 이 줄 추가
+
+    port   = port = 8081
     server = HTTPServer(("localhost", port), Handler)
-    print(f"\n  청록 헌장 평가 일지")
-    print(f"  http://localhost:{port}\n")
+    print(f"\n  ✓  청록 헌장 평가 일지")
+    print(f"     http://localhost:{port}")
+    print(f"     데이터 저장 위치: {DATA_FILE}\n")
     try:
         server.serve_forever()
     except KeyboardInterrupt:
-        print("\n  서버 종료")
+        print("\n  서버 종료 (Ctrl+C)")
