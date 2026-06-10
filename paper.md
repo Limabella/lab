@@ -125,3 +125,18 @@
 - [2002-12-01] [Bad Boys, Good Mothers, and the “Miracle” of Ritalin](https://doi.org/10.1017/S0269889702000650)
   - ADHD와 리탈린의 사회적·역사적 맥락 분석
   - 진단 및 약물 사용의 문화적 정당화 과정 탐구
+
+---
+
+## Character AI
+- [2026-01-15] [Role-Playing Agents Driven by Large Language Models: Current Status, Challenges, and Future Trends](https://arxiv.org/abs/2601.10122)
+  - LLM 기반 role-playing agent의 발전 흐름, 핵심 기술, 평가 방법, 한계를 정리한 서베이 논문
+  - psychological scale-driven character modeling, memory-augmented prompting, motivation-situation-based behavior control 등을 주요 기술 경로로 설명
+  + MoAM 성격 모델링, 메모리 구조, 캐릭터 일관성 평가 기준 참고용
+
+- [2025-07-23] [An LLM-Based Behavior Agent with Natural Language Personality Control: Enabling Trait-Driven NPC Decision-Making through Prompt Engineering](https://etasr.com/index.php/ETASR/article/view/12631)
+  - OCEAN(Big Five) 성격 모델을 활용해 NPC의 의사결정과 행동을 제어하는 LLM 기반 게임 NPC 연구
+  - NPC traits, game state, environment를 prompt generator로 구성하여 성격 기반 행동을 생성
+  + Unity NPC의 성격 기반 행동 제어 및 prompt-driven behavior 설계 참고용
+
+---
