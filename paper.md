@@ -85,6 +85,12 @@
 ---
 
 ## Psychology & Bias
+
+- [2026] [GPT-Powered Chatbot-Based Positive Psychology Intervention](https://formative.jmir.org/2026/1/e85060)
+  - GPT 기반 챗봇을 활용한 Positive Psychology Intervention(PPI) 연구
+  - 감사(Gratitude), 강점(Strengths), 의미(Meaning) 중심 활동 제공
+  - AI가 긍정심리학 개입을 개인화하여 수행할 수 있음을 검증
+
 - [2025/2026] [The “Web Browser” of the Collective Unconscious: The Mirror and Oracle of Generative AI](https://link.springer.com/article/10.1007/s12115-026-01193-1?utm_source=copilot.com)
   - 생성형 AI를 집단무의식의 거울·오라클로 해석
   - Midjourney 같은 이미지 생성 AI가 상징적 어휘를 재구성하며 새로운 의미를 창출
