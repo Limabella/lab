@@ -1,0 +1,4 @@
+interface:
+  display_name: "청록 벨로그 운영"
+  short_description: "청록 헌장 기반 벨로그 평가·기록·시각화 운영"
+  default_prompt: "Use $manage-cheongrok-velog to open the evaluation workspace and review my Velog post."
