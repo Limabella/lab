@@ -84,7 +84,35 @@
 
 ---
 
+## Neuroscience
+
+- [2026-03-31] [Neural signatures of human psychological resilience driven by acute stress](https://doi.org/10.1073/pnas.2524075123)
+  - 급성 스트레스 노출 후 1.5시간 동안 fMRI, EEG, 말초 생리신호를 함께 측정해 인간의 심리적 회복탄력성과 관련된 신경생리학적 변화를 분석
+  - 스트레스 직후보다 약 1시간 뒤에 회복탄력성 차이를 나타내는 지연된 신경 동역학이 두드러짐
+  - 회복탄력성이 낮은 집단에서는 피질 현저성 네트워크 활성과 high-beta·gamma 파워가 증가하고, 높은 집단에서는 기본모드 네트워크와 후방 해마의 자발적 활성이 증가
+  + 웨어러블 모델(시계열 데이터셋) - 프로젝트에서 스트레스 순간값뿐 아니라 회복 궤적과 시간 지연을 모델링하는 근거로 활용 가능
+
+---
+
+## Wearable
+
+- [2026-04] [Enabling Adaptive Cardio-Respiratory Biofeedback Training on Ubiquitous Hand-Worn Devices](https://doi.org/10.1145/3772318.3790488)
+  - 스마트워치와 스마트링의 PPG·IMU를 이용해 심박·호흡 지표를 동시에 추정하는 손 착용형 심폐 바이오피드백 시스템 제안
+  - 사용자가 손을 복부에 올리는 상호작용과 실시간 HRV·호흡 정렬 상태를 결합해 호흡 안내 속도를 폐루프 방식으로 개인화
+  - 고정 속도 안내와 비교해 지속적인 HRV, 안내 호흡과의 정렬, 참여 경험을 개선하는 적응형 설계를 평가
+  + 웨어러블 모델(센서와 바이오피드백) - 프로젝트의 센서 융합, 적응형 호흡 중재, 중재 후 재측정 루프 설계에 가용할 사례
+
+---
+
 ## Psychology & Bias
+
+### Flourishing / Positive Psychology
+
+
+- [2025] [Global Flourishing Study](https://hfh.fas.harvard.edu/global-flourishing-study)
+  - Harvard Human Flourishing Program이 주도하는 대규모 국제 플로리싱 연구
+  - 22개국, 20만 명 이상을 대상으로 인간 번영의 분포와 결정 요인을 장기 추적하는 패널 연구
+  - 행복, 건강, 의미, 성격/덕성, 관계, 경제 안정성 등 다차원적 플로리싱 영역을 포함
 
 - [2026] [GPT-Powered Chatbot-Based Positive Psychology Intervention](https://formative.jmir.org/2026/1/e85060)
   - GPT 기반 챗봇을 활용한 Positive Psychology Intervention(PPI) 연구
@@ -109,7 +137,6 @@
   - 중국 기술·제조·금융 기업의 86개 팀(379명)을 대상으로 다원적 설문조사 진행  
   - 실무적 시사점: 조직은 마키아벨리적 리더의 야망을 혁신 목표에 맞추고, 교차 이해를 촉진하는 협업 구조를 설계해야 함  
 
-
 - [2025-03-01] [공감과 공격성의 관계: 어두운 4요소 성격의 매개효과](https://doi.org/10.0000/kjhp.2025.31.2.429)
   - 한국심리학회지
   - 공감과 공격성의 간접 관계 분석
@@ -119,10 +146,31 @@
   - 구조방정식 모형(SEM)을 통해 공감 → Dark Tetrad → 공격성이라는 간접 경로 규명
   - 공감 수준이 높을수록 사이코패시·사디즘 경로가 약화되어 공격성이 줄어드는 효과 확인
 
+- [2017] [On the promotion of human flourishing](https://doi.org/10.1073/pnas.1702996114)
+  - Tyler J. VanderWeele의 인간 플로리싱 확장 모델
+  - 행복과 삶의 만족, 정신·신체 건강, 의미와 목적, 인격과 덕성, 가까운 사회적 관계를 핵심 영역으로 제시
+  - Harvard Flourishing Measure의 이론적 기반으로 활용 가능
+  - Secure Flourish 버전은 경제적·물질적 안정성까지 포함하여 지속 가능한 번영을 측정
+
+- [2016] [The PERMA-Profiler: A brief multidimensional measure of flourishing](https://www.internationaljournalofwellbeing.org/index.php/ijow/article/view/526)
+  - Butler & Kern이 제안한 플로리싱 측정도구
+  - Seligman의 PERMA 모델을 기반으로 Positive Emotion, Engagement, Relationships, Meaning, Accomplishment를 다차원적으로 측정
+  - 부정 정서와 건강 영역도 함께 포함하여 개인의 웰빙 프로파일을 구성할 수 있음
+
 - [2014-02-01] [Narcissism in the Modern World](https://doi.org/10.1080/14753634.2014.894225)
   - Pat MacDonald
   - 현대 사회의 자기애적 성향 확산 분석
   - 문화적·임상적 함의 논의
+
+- [2011] [Flourish: A Visionary New Understanding of Happiness and Well-being](https://www.simonandschuster.com/books/Flourish/Martin-E-P-Seligman/9781439190753)
+  - Martin E. P. Seligman의 플로리싱 이론 핵심 저서
+  - 웰빙을 단순한 행복감이 아니라 Positive Emotion, Engagement, Relationships, Meaning, Accomplishment로 구성된 PERMA 모델로 설명
+
+- [2009] [New measures of well-being: Flourishing and positive and negative feelings](https://doi.org/10.1007/s11205-009-9493-y)
+  - Diener et al.이 Flourishing Scale과 SPANE을 제안한 논문
+  - Flourishing Scale은 관계, 유능감, 의미와 목적, 자존감, 낙관성 등 전반적 인간 기능을 8문항으로 간단히 측정
+  - 복잡한 PERMA 구조보다 빠르게 “전반적 번영 점수”를 확인하는 데 적합
+  + MND 상담사봇에서 사전/사후 변화 점수 또는 간단한 플로리싱 총점 지표로 활용 가능
 
 - [2008-06-01] [Distracted: The Erosion of Attention and the Coming Dark Age](https://prometheusbooks.com)
   - Maggie Jackson 저서
