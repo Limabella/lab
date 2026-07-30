@@ -194,3 +194,33 @@
   + Unity NPC의 성격 기반 행동 제어 및 prompt-driven behavior 설계 참고용
 
 ---
+
+## Food
+
+- [2025-07-05] [A chemical language model for molecular taste prediction](https://doi.org/10.1038/s41538-025-00474-z)
+  - 15,025개 맛 분자 데이터셋과 사전학습 ChemBERTa를 이용해 SMILES만으로 단맛·쓴맛·신맛·감칠맛 및 undefined를 예측하는 화학 언어모델 FART를 제안
+  - SMILES 증강과 예측 합의 기반 confidence metric을 결합한 모델은 테스트셋의 94%를 판정하면서 91.55% 정확도와 0.9806 macro AUROC를 기록
+  - Integrated Gradients로 맛 예측에 기여한 원자와 작용기를 시각화하여 식품화학적 해석 가능성을 제공
+  - 다중 맛 분자의 단일 라벨화, 입체화학 구분 실패, confidence 적용 시 일부 분자를 판정하지 않는 한계가 있어 성능 수치 해석에 주의 필요
+
+- [2024-10-07] [Digital Fingerprinting of Complex Liquids Using a Reconfigurable Multi-Sensor System with Foundation Models](https://doi.org/10.1002/advs.202407513)
+  - 휴대형 다중 화학 센서의 신호를 시각적 fingerprint로 변환하고 사전학습 vision foundation model로 분석하는 IBM HyperTaste 계열 연구
+  - 적은 도메인별 학습 데이터로 서로 다른 네 가지 화학 감지 과제를 처리하며, 전문가가 설계한 센서 특징과 대등하거나 더 나은 성능을 제시
+  - 센서가 인간처럼 맛을 느끼는 것이 아니라 복합 액체의 다중 신호 패턴을 표현·비교한다는 점에서 전자혀 기반 음식 식별의 방법론적 참고 자료
+
+- [2022-12] [Accelerated estimation of coffee sensory profiles using an AI-assisted electronic tongue](https://doi.org/10.1016/j.ifset.2022.103205)
+  - 저선택성 전위차 센서 배열과 머신러닝을 결합해 커피 21종을 평균 정확도 91.3%로 구분
+  - 단일 회귀 모델로 13개 관능 묘사의 강도를 동시에 예측하고, 33개 샘플의 관능 프로파일을 0.78 RV coefficient로 재구성
+  - 개인 미각 모델이 센서 측정값과 인간의 관능 언어를 연결하는 방법을 설계할 때 직접적인 참고 사례
+
+- [2022-05-04] [Mastication-Enhanced Taste-Based Classification of Multi-Ingredient Dishes for Robotic Cooking](https://doi.org/10.3389/frobt.2022.886074)
+  - 혼합으로 저작 과정을 모사하고 여러 위치의 전도도를 측정해 토마토 스크램블에그 9종을 분류하는 로봇 조리 시스템
+  - 균질화된 샘플 한 번만 측정했을 때의 F1 0.55에서 혼합 전후 두 상태를 이용했을 때 F1 0.93으로 향상
+  - 음식의 공간적 분포와 섭취 과정의 시간 변화를 데이터화한다는 의의가 있지만, 실험은 단일 염도 센서와 제한된 요리 조합에 기반한 개념 증명
+
+- [2019-05-01] [A portable potentiometric electronic tongue leveraging smartphone and cloud platforms](https://doi.org/10.1109/ISOEN.2019.8823244)
+  - 이온 감응 필름 센서, 마이크로컨트롤러, 스마트폰 인터페이스, 클라우드 머신러닝을 결합한 IBM HyperTaste의 휴대형 전자혀 기반 연구
+  - 센서의 전위차 시계열을 학습해 음료와 생수를 분류하며, 데이터 수집부터 클라우드 추론까지 1분 이내 처리 가능성을 시연
+  - 개인 미각 자체보다 음식·음료의 객관적 화학 fingerprint를 수집하는 보조 계층으로 활용 가능
+
+---
