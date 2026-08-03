@@ -1,1 +1,64 @@
-[]
+[
+  {
+    "date": "2026-08-03",
+    "title": "청록 #9 - 제3의 중재와 안정성 검토 역할",
+    "note": "띄어쓰기 맞춤법이 상당히 많이 틀렸으며, 불필요한 쉼표와 접미어가 포함됨\n\n정량적 데이터는 다소 부족하였으나 시각화 이미지는 편하게 읽을 수 있는 정도였음\n\n그리고, 공학적 설계 혹은 개발 분야에서 진척도가 느려, 좀 더 개발에 박차를 가할 필요성이 매우매우 보인다.\n\n사실상, 글의 짜임새 빼곤 엉망진창이라고 할 수 있다.",
+    "ranking": [
+      {
+        "rank": 1,
+        "id": "citation",
+        "name": "인용과 출처",
+        "zone": "good"
+      },
+      {
+        "rank": 2,
+        "id": "structure",
+        "name": "글 구조",
+        "zone": "good"
+      },
+      {
+        "rank": 3,
+        "id": "politics",
+        "name": "정치성 절제",
+        "zone": "good"
+      },
+      {
+        "rank": 4,
+        "id": "data",
+        "name": "정량적 데이터화",
+        "zone": "good"
+      },
+      {
+        "rank": 5,
+        "id": "problem",
+        "name": "문제의식",
+        "zone": "good"
+      },
+      {
+        "rank": 6,
+        "id": "engineering",
+        "name": "공학적 구현",
+        "zone": "bad"
+      },
+      {
+        "rank": 7,
+        "id": "ai",
+        "name": "AI 활용 방식",
+        "zone": "bad"
+      },
+      {
+        "rank": 8,
+        "id": "tone",
+        "name": "감정 균형",
+        "zone": "bad"
+      },
+      {
+        "rank": 9,
+        "id": "logic",
+        "name": "논리의 흐름",
+        "zone": "bad"
+      }
+    ],
+    "savedAt": "2026-08-03T08:14:16.470Z"
+  }
+]
