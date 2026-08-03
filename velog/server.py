@@ -10,6 +10,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import sys
 import tempfile
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -23,6 +24,17 @@ ITEM_IDS = {
     "structure", "logic", "ai", "data", "tone",
     "problem", "politics", "engineering", "citation",
 }
+
+
+def configured_port() -> int:
+    value = sys.argv[1] if len(sys.argv) > 1 else os.environ.get("PORT", "8081")
+    try:
+        port = int(value)
+    except ValueError as exc:
+        raise SystemExit(f"Port must be a number: {value}") from exc
+    if not 1 <= port <= 65535:
+        raise SystemExit(f"Port must be between 1 and 65535: {port}")
+    return port
 
 
 def load_records() -> list[dict]:
@@ -203,9 +215,10 @@ class Handler(SimpleHTTPRequestHandler):
 
 def main() -> None:
     os.chdir(ROOT)
-    server = ThreadingHTTPServer(("localhost", 8081), Handler)
+    port = configured_port()
+    server = ThreadingHTTPServer(("localhost", port), Handler)
     print("\n  [ready] 청록 헌장 평가 일지")
-    print("    http://localhost:8081")
+    print(f"    http://localhost:{port}")
     print(f"    기록 파일: {DATA_FILE}\n")
     try:
         server.serve_forever()
