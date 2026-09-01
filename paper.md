@@ -44,6 +44,19 @@
 
 ---
 
+## Music Theory
+
+- [2025] [Distinct and content-specific neural representations of self- and other-produced actions in joint piano performance](https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2025.1543131/full)
+  - 피아노 앙상블 연주에서 자기 행동과 타인의 행동을 구분·통합하는 뇌의 청각-운동 네트워크를 다룬 연구
+  - Maidhof, C., Müller, V., & Koelsch, S. (2025). *Frontiers in Human Neuroscience, 19*.
+
+- [2023] [Understanding functional brain reorganisation for naturalistic piano playing in novice pianists](https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2025.1543131/full)
+  - 초보 피아니스트의 반복 훈련 과정에서 청각·운동·소뇌·전두엽 영역의 뇌 활성 패턴 변화와 자동화 과정을 탐구한 예비 연구
+  - Herholz, S. C., Halwani, G. F., & Zatorre, R. J.
+  - bioRxiv/Frontiers 연계 자료
+
+---
+
 ## Multimodal AI
 
 - [2026-05-18] [Multi-emotion and intensity-driven response generation for richer multimodal dialogue](https://www.nature.com/articles/s41598-026-41034-z?utm_source=copilot.com)
@@ -91,6 +104,14 @@
   - 스트레스 직후보다 약 1시간 뒤에 회복탄력성 차이를 나타내는 지연된 신경 동역학이 두드러짐
   - 회복탄력성이 낮은 집단에서는 피질 현저성 네트워크 활성과 high-beta·gamma 파워가 증가하고, 높은 집단에서는 기본모드 네트워크와 후방 해마의 자발적 활성이 증가
   + 웨어러블 모델(시계열 데이터셋) - 프로젝트에서 스트레스 순간값뿐 아니라 회복 궤적과 시간 지연을 모델링하는 근거로 활용 가능
+
+- [2008] [Habits, rituals, and the evaluative brain](https://doi.org/10.1146/annurev.neuro.29.051605.112851)
+  - 기저핵과 선조체를 중심으로 습관 및 행동 자동화를 다룬 연구
+  - Graybiel, A. M. *Annual Review of Neuroscience, 31*, 359–387.
+
+- [2001] [An integrative theory of prefrontal cortex function](https://doi.org/10.1146/annurev.neuro.24.1.167)
+  - 전전두피질의 인지·행동 통제 기능을 설명하는 핵심 연구
+  - Miller, E. K., & Cohen, J. D. *Annual Review of Neuroscience, 24*, 167–202.
 
 ---
 
