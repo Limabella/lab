@@ -99,6 +99,12 @@
 
 ## Neuroscience
 
+- [2025-11-05] [Mirror-neuron patterns in AI alignment (Version 2)](https://doi.org/10.48550/arXiv.2511.01885)
+  - Wyrick, R. (2025). AI alignment에서 거울신경 패턴의 개념과 응용 가능성을 다룬 연구
+
+- [2023] [Effects of avatar shape and motion on mirror neuron system activity](https://doi.org/10.3389/fnhum.2023.1173185)
+  - Miyamoto, Y., Uchitomi, H., & Miyake, Y. (2023). 아바타의 형태와 움직임이 거울신경계 활동에 미치는 영향을 분석한 연구
+
 - [2026-03-31] [Neural signatures of human psychological resilience driven by acute stress](https://doi.org/10.1073/pnas.2524075123)
   - 급성 스트레스 노출 후 1.5시간 동안 fMRI, EEG, 말초 생리신호를 함께 측정해 인간의 심리적 회복탄력성과 관련된 신경생리학적 변화를 분석
   - 스트레스 직후보다 약 1시간 뒤에 회복탄력성 차이를 나타내는 지연된 신경 동역학이 두드러짐
