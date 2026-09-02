@@ -115,6 +115,44 @@
 
 ---
 
+## Team Management Theory
+
+- [2024-06] [Organizational Harmony: A fresh framework to navigate tensions](https://www.happiness.hks.harvard.edu/june-2024-issue)
+  - 하버드 케네디스쿨 Leadership & Happiness Lab과 연계된 조직 하모니 연구
+  - 핵심 연구자: Marc Correa(ESADE 경영대학원 교수·하버드 케네디스쿨 방문연구자)
+  - 조직 하모니를 조직 내 다양한 차이와 긴장을 없애지 않고 통합해 협력 가능한 상태로 만드는 과정으로 정의
+  - 핵심 요소: 공동의 목적, 협력 의지, 심리적 안전
+  - 구조와 유연성, 성과와 과정, 단기와 장기 목표를 함께 관리하는 ‘Both/And’ 사고방식 강조
+  - 하모니는 갈등이 없는 상태가 아니라, 차이와 긴장을 생산적으로 조정하는 동적인 과정으로 설명됨
+
+- [2023-09] [The Dynamics of Team Learning: Harmony and Rhythm in Teamwork Arrangements for Innovation](https://pubmed.ncbi.nlm.nih.gov/37560020/)
+  - Amy C. Edmondson(하버드 경영대학원) 등이 혁신팀의 학습 활동을 하모니·불협화음·리듬의 관점에서 분석
+  - 팀워크에서 의견 충돌이 반드시 부정적인 것은 아니며, 적절한 긴장과 학습 활동의 조율이 혁신 성과에 기여할 수 있음을 제시
+  - 팀 구성원 간 협력과 생산적 과업 갈등을 함께 설계하는 팀 경영의 참고 연구
+
+---
+
+## Agile Management Theory
+
+- [2024] [Understanding how agile teams reach effectiveness: A systematic literature review to take stock and look forward](https://doi.org/10.1016/j.hrmr.2024.101056)
+  - 애자일 팀의 효과성을 다룬 연구를 체계적으로 검토하고, 복잡하고 전문화된 과업에 대응하는 팀 운영 요소를 정리
+  - 애자일 팀은 반복적 학습, 고객·이해관계자와의 협업, 자기관리와 적응을 통해 불확실성에 대응함
+
+- [2021] [An empirical study on changing leadership in agile teams](https://link.springer.com/article/10.1007/s10664-021-09949-5)
+  - 애자일 팀이 성숙해지는 과정에서 리더십이 어떻게 변화하는지 실증적으로 분석
+  - Scrum Master는 명령·통제보다 팀의 자기조직화와 자율적 리더십을 촉진하는 역할을 수행
+
+- [2016] [Teamwork quality and project success in software development: A survey of agile development teams](https://doi.org/10.1016/j.jss.2016.09.028)
+  - 26개 기업 71개 애자일 팀, 477명을 대상으로 팀워크 품질과 성과·학습·직무만족의 관계를 조사
+  - 팀워크 품질은 팀 성과와 구성원 학습 및 직무만족에 긍정적인 영향을 보임
+
+- [2001] [Manifesto for Agile Software Development](https://agilemanifesto.org/)
+  - 애자일 소프트웨어 개발의 출발점이 된 선언문
+  - 프로세스·도구보다 개인과 상호작용, 포괄적 문서보다 작동하는 소프트웨어, 계약 협상보다 고객 협업, 계획 준수보다 변화 대응을 중시
+  - 짧은 주기의 가치 제공, 자기조직화 팀, 지속적 회고와 개선을 핵심 원칙으로 제시
+
+---
+
 ## Wearable
 
 - [2026-04] [Enabling Adaptive Cardio-Respiratory Biofeedback Training on Ubiquitous Hand-Worn Devices](https://doi.org/10.1145/3772318.3790488)
