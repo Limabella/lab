@@ -166,6 +166,20 @@
 
 ## Psychology & Bias
 
+### Digital Attachment / Face Perception
+
+- [2023-09-28] [The smartphone as a “significant other”: interpersonal dependency and attachment in maladaptive smartphone and social networks use](https://doi.org/10.1186/s40359-023-01339-4)
+  - Gritti, E. S., Bornstein, R. F., & Barbot, B. *BMC Psychology, 11*, 296.
+  - 성인 341명의 설문 자료를 바탕으로 성인 애착 유형·대인관계 의존성과 스마트폰에 대한 정서적 유대 및 SNS 사용의 관계를 분석
+  - 불안형 애착과 파괴적 과잉의존이 부적응적 스마트폰 사용의 잠재적 위험 요인으로 나타나, 대인관계 양식과 기기에 대한 애착 사이의 유사성을 제시
+  - 횡단 설문 연구이므로 인과관계나 스마트폰이 실제 연인·반려동물과 동등한 애착 대상이라는 결론으로 일반화하는 데에는 한계가 있음
+
+- [2022-01-10] [Beyond the beauty of occlusion: medical masks increase facial attractiveness more than other face coverings](https://doi.org/10.1186/s41235-021-00351-9)
+  - Hies, O., & Lewis, M. B. *Cognitive Research: Principles and Implications, 7*, 1.
+  - 카디프대 여성 학부생 43명을 모집하고 1명을 제외한 표본에서, 남성 얼굴의 의료용 마스크·천 마스크·책 가림·비가림 조건에 따른 매력도 평가를 비교
+  - 의료용 마스크 조건의 매력도가 가장 높았으며, 천 마스크 조건도 비가림 조건보다 높게 평가됨; 의료·돌봄 직업과의 연관성 등을 가능한 설명으로 논의
+  - 측정 대상은 관찰자가 평가한 얼굴 매력도이며, 착용자의 심리적 안정·익명성·사회불안 감소나 ‘Cognitive Shielding’을 직접 검증한 연구는 아님
+
 ### Flourishing / Positive Psychology
 
 
