@@ -168,6 +168,12 @@
 
 ### Digital Attachment / Face Perception
 
+- [2023] [A study of the relationship between social anxiety and mask-wearing intention among college students in the post-COVID-19 era: mediating effects of self-identity, impression management, and avoidance](https://doi.org/10.3389/fpsyg.2023.1287115)
+  - Xia, T., Xu, X., & Ding, S. *Frontiers in Psychology, 14*, 1287115. 중국 광둥공업대 연구진.
+  - 사회불안 점수가 높은 대학생을 대상으로 사회불안·회피·인상 관리·자기정체성과 마스크 착용 의향의 관계를 설문으로 분석
+  - 사회불안은 회피, 인상 관리, 자기정체성과 회피의 연쇄 매개 경로를 통해 마스크 착용 의향과 연결됨
+  - 타인의 평가로부터 자신을 보호하려는 심리와 마스크의 관계를 글로 풀어내는 참고 자료; 횡단 설문 연구이므로 인과관계나 장기적 치료 효과를 입증하지는 않음
+
 - [2023-09-28] [The smartphone as a “significant other”: interpersonal dependency and attachment in maladaptive smartphone and social networks use](https://doi.org/10.1186/s40359-023-01339-4)
   - Gritti, E. S., Bornstein, R. F., & Barbot, B. *BMC Psychology, 11*, 296.
   - 성인 341명의 설문 자료를 바탕으로 성인 애착 유형·대인관계 의존성과 스마트폰에 대한 정서적 유대 및 SNS 사용의 관계를 분석
@@ -179,6 +185,13 @@
   - 카디프대 여성 학부생 43명을 모집하고 1명을 제외한 표본에서, 남성 얼굴의 의료용 마스크·천 마스크·책 가림·비가림 조건에 따른 매력도 평가를 비교
   - 의료용 마스크 조건의 매력도가 가장 높았으며, 천 마스크 조건도 비가림 조건보다 높게 평가됨; 의료·돌봄 직업과의 연관성 등을 가능한 설명으로 논의
   - 측정 대상은 관찰자가 평가한 얼굴 매력도이며, 착용자의 심리적 안정·익명성·사회불안 감소나 ‘Cognitive Shielding’을 직접 검증한 연구는 아님
+
+- [2020] [The Smartphone as a Pacifying Technology](https://doi.org/10.1093/jcr/ucaa005)
+  - Melumad, S., & Pham, M. T. *Journal of Consumer Research, 47*(2), 237–255. 미국 펜실베이니아대·컬럼비아대 연구진.
+  - 한 차례의 현장 연구와 세 차례의 실험을 통해 자신의 스마트폰이 제공하는 심리적 위안과 스트레스 완화를 탐구
+  - 스트레스 상황에서 스마트폰을 찾는 경향이 나타났으며, 같은 활동을 노트북이나 타인의 스마트폰으로 할 때보다 자신의 스마트폰을 사용할 때 더 큰 스트레스 완화가 관찰됨
+  - 휴대성·개인적 소유물이라는 성격·주관적 사생활 감각·촉각적 만족이 결합된 정서 조절 도구라는 관점으로 활용 가능; 단기적 위안을 장기적 정신건강 개선과 동일시하지 않도록 구분
+  - [저자 공개 버전 안내(SSRN)](https://ssrn.com/abstract=3525835)
 
 ### Flourishing / Positive Psychology
 
