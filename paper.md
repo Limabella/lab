@@ -99,11 +99,9 @@
 
 ## Neuroscience
 
-- [2025-11-05] [Mirror-neuron patterns in AI alignment (Version 2)](https://doi.org/10.48550/arXiv.2511.01885)
-  - Wyrick, R. (2025). AI alignment에서 거울신경 패턴의 개념과 응용 가능성을 다룬 연구
+- Wyrick, R. (2025, November 5). [Mirror-neuron patterns in AI alignment (Version 2)](https://doi.org/10.48550/arXiv.2511.01885) ([arXiv](https://doi.org/10.48550/arXiv.2511.01885))
 
-- [2023] [Effects of avatar shape and motion on mirror neuron system activity](https://doi.org/10.3389/fnhum.2023.1173185)
-  - Miyamoto, Y., Uchitomi, H., & Miyake, Y. (2023). 아바타의 형태와 움직임이 거울신경계 활동에 미치는 영향을 분석한 연구
+- Miyamoto, Y., Uchitomi, H., & Miyake, Y. (2023). [Effects of avatar shape and motion on mirror neuron system activity](https://doi.org/10.3389/fnhum.2023.1173185). *Frontiers in Human Neuroscience, 17*. ([Frontiers](https://doi.org/10.3389/fnhum.2023.1173185))
 
 - [2026-03-31] [Neural signatures of human psychological resilience driven by acute stress](https://doi.org/10.1073/pnas.2524075123)
   - 급성 스트레스 노출 후 1.5시간 동안 fMRI, EEG, 말초 생리신호를 함께 측정해 인간의 심리적 회복탄력성과 관련된 신경생리학적 변화를 분석
@@ -166,7 +164,33 @@
 
 ## Psychology & Bias
 
-### Digital Attachment / Face Perception
+### Face Perception & Impression Management
+
+- [2018-01-19] [SCUT-FBP5500: A Diverse Benchmark Dataset for Multi-Paradigm Facial Beauty Prediction](https://arxiv.org/abs/1801.06345)
+  - Liang, L., Lin, L., Jin, L., Xie, D., & Li, M. 중국 화남이공대 연구진.
+  - 정면 얼굴 사진 5,500장에 얼굴 랜드마크, 1–5점의 매력도 점수 및 점수 분포를 제공하는 얼굴 매력도 예측 벤치마크
+  - 사람의 평가를 정답 라벨로 삼아 분류·회귀·순위 예측 등 여러 지도학습 방식과 딥러닝 모델을 비교
+  - AI가 외모의 ‘객관적 좋음’을 발견한다기보다 평가자 집단의 판단 경향을 학습한다는 점을 설명하는 방법론적 참고 자료
+  - 매력도 예측과 실제 성격·능력·도덕성 평가는 구분해야 하며, 제한된 얼굴 구성과 평가자 집단의 기준을 보편적 미의 기준으로 일반화할 수 없음
+  - **부록: 이미지와 언어의 연결 학습**
+
+    - [2021-02-26] [Learning Transferable Visual Models From Natural Language Supervision (CLIP)](https://arxiv.org/abs/2103.00020)
+      - Radford, A., Kim, J. W., et al. (2021).
+      - 인터넷에서 수집한 이미지·텍스트 쌍 4억 개를 이용해 어떤 설명문이 어떤 이미지에 대응하는지 학습하는 이미지·언어 대조학습 모델 CLIP 제안
+      - 이미지와 문장을 공통 표현 공간에 연결하여, 별도의 과제별 학습 없이 자연어 설명으로 시각적 범주를 분류하는 zero-shot 전이를 평가
+      - 100 BURGER FAMILY 적용 예: 촬영한 재료 사진을 ‘통토마토’, ‘토마토 단면’, ‘사과’ 같은 후보 설명과 비교하여 재료를 식별하는 데 응용 가능; 게임용 이미지 생성은 별도 모델이나 준비된 에셋이 필요
+      - 외모 평가 점수를 직접 제공하지 않아도 이미지와 언어의 연결을 학습할 수 있다는 원리를 설명하는 배경 자료로 수록
+      - 얼굴 매력도나 외모 후광효과를 직접 검증한 논문은 아니므로, AI가 외모에서 성격·능력을 추론한다는 주장의 직접 근거와는 구분
+
+- [2022-01-10] [Beyond the beauty of occlusion: medical masks increase facial attractiveness more than other face coverings](https://doi.org/10.1186/s41235-021-00351-9)
+  - Hies, O., & Lewis, M. B. *Cognitive Research: Principles and Implications, 7*, 1.
+  - 카디프대 여성 학부생 43명을 모집하고 1명을 제외한 표본에서, 남성 얼굴의 의료용 마스크·천 마스크·책 가림·비가림 조건에 따른 매력도 평가를 비교
+  - 의료용 마스크 조건의 매력도가 가장 높았으며, 천 마스크 조건도 비가림 조건보다 높게 평가됨; 의료·돌봄 직업과의 연관성 등을 가능한 설명으로 논의
+  - 측정 대상은 관찰자가 평가한 얼굴 매력도이며, 착용자의 심리적 안정·익명성·사회불안 감소나 ‘Cognitive Shielding’을 직접 검증한 연구는 아님
+
+- Leary, M. R., & Kowalski, R. M. (1990). [Impression management: A literature review and two-component model](https://doi.org/10.1037/0033-2909.107.1.34). *Psychological Bulletin, 107*(1), 34–47. ([PDF](https://www.communicationcache.com/uploads/1/0/8/8/10887248/impression_management-_a_literature_review_and_two-component_model.pdf))
+  - 인상 관리(impression management)를 원하는 인상을 만들려는 동기와 실제 자기표현 행동의 두 구성요소로 정리한 문헌고찰 및 이론 모델
+  - 자기표현, 사회적 평가, 대인관계 맥락에서 AI 캐릭터·아바타의 외형과 행동을 분석할 때 활용할 수 있는 기초 이론
 
 - [2023] [A study of the relationship between social anxiety and mask-wearing intention among college students in the post-COVID-19 era: mediating effects of self-identity, impression management, and avoidance](https://doi.org/10.3389/fpsyg.2023.1287115)
   - Xia, T., Xu, X., & Ding, S. *Frontiers in Psychology, 14*, 1287115. 중국 광둥공업대 연구진.
@@ -174,17 +198,13 @@
   - 사회불안은 회피, 인상 관리, 자기정체성과 회피의 연쇄 매개 경로를 통해 마스크 착용 의향과 연결됨
   - 타인의 평가로부터 자신을 보호하려는 심리와 마스크의 관계를 글로 풀어내는 참고 자료; 횡단 설문 연구이므로 인과관계나 장기적 치료 효과를 입증하지는 않음
 
+### Digital Attachment
+
 - [2023-09-28] [The smartphone as a “significant other”: interpersonal dependency and attachment in maladaptive smartphone and social networks use](https://doi.org/10.1186/s40359-023-01339-4)
   - Gritti, E. S., Bornstein, R. F., & Barbot, B. *BMC Psychology, 11*, 296.
   - 성인 341명의 설문 자료를 바탕으로 성인 애착 유형·대인관계 의존성과 스마트폰에 대한 정서적 유대 및 SNS 사용의 관계를 분석
   - 불안형 애착과 파괴적 과잉의존이 부적응적 스마트폰 사용의 잠재적 위험 요인으로 나타나, 대인관계 양식과 기기에 대한 애착 사이의 유사성을 제시
   - 횡단 설문 연구이므로 인과관계나 스마트폰이 실제 연인·반려동물과 동등한 애착 대상이라는 결론으로 일반화하는 데에는 한계가 있음
-
-- [2022-01-10] [Beyond the beauty of occlusion: medical masks increase facial attractiveness more than other face coverings](https://doi.org/10.1186/s41235-021-00351-9)
-  - Hies, O., & Lewis, M. B. *Cognitive Research: Principles and Implications, 7*, 1.
-  - 카디프대 여성 학부생 43명을 모집하고 1명을 제외한 표본에서, 남성 얼굴의 의료용 마스크·천 마스크·책 가림·비가림 조건에 따른 매력도 평가를 비교
-  - 의료용 마스크 조건의 매력도가 가장 높았으며, 천 마스크 조건도 비가림 조건보다 높게 평가됨; 의료·돌봄 직업과의 연관성 등을 가능한 설명으로 논의
-  - 측정 대상은 관찰자가 평가한 얼굴 매력도이며, 착용자의 심리적 안정·익명성·사회불안 감소나 ‘Cognitive Shielding’을 직접 검증한 연구는 아님
 
 - [2020] [The Smartphone as a Pacifying Technology](https://doi.org/10.1093/jcr/ucaa005)
   - Melumad, S., & Pham, M. T. *Journal of Consumer Research, 47*(2), 237–255. 미국 펜실베이니아대·컬럼비아대 연구진.
