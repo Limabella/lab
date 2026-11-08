@@ -188,9 +188,10 @@
   - 의료용 마스크 조건의 매력도가 가장 높았으며, 천 마스크 조건도 비가림 조건보다 높게 평가됨; 의료·돌봄 직업과의 연관성 등을 가능한 설명으로 논의
   - 측정 대상은 관찰자가 평가한 얼굴 매력도이며, 착용자의 심리적 안정·익명성·사회불안 감소나 ‘Cognitive Shielding’을 직접 검증한 연구는 아님
 
-- Leary, M. R., & Kowalski, R. M. (1990). [Impression management: A literature review and two-component model](https://doi.org/10.1037/0033-2909.107.1.34). *Psychological Bulletin, 107*(1), 34–47. ([PDF](https://www.communicationcache.com/uploads/1/0/8/8/10887248/impression_management-_a_literature_review_and_two-component_model.pdf))
-  - 인상 관리(impression management)를 원하는 인상을 만들려는 동기와 실제 자기표현 행동의 두 구성요소로 정리한 문헌고찰 및 이론 모델
-  - 자기표현, 사회적 평가, 대인관계 맥락에서 AI 캐릭터·아바타의 외형과 행동을 분석할 때 활용할 수 있는 기초 이론
+- [1990-01-01] [Impression management: A literature review and two-component model](https://doi.org/10.1037/0033-2909.107.1.34) ([PDF](https://www.communicationcache.com/uploads/1/0/8/8/10887248/impression_management-_a_literature_review_and_two-component_model.pdf))
+  - Leary, M. R., & Kowalski, R. M. *Psychological Bulletin, 107*(1), 34–47.
+  - 인상 관리(impression management)를 인상 동기(impression motivation)와 인상 구성(impression construction)의 두 구성요소로 구분해 정리한 문헌고찰 및 이론 모델
+  - 타인에게 형성되는 인상을 조절하려는 동기와 그에 따른 자기표현·대인행동을 이해하기 위한 기초 이론
 
 - [2023] [A study of the relationship between social anxiety and mask-wearing intention among college students in the post-COVID-19 era: mediating effects of self-identity, impression management, and avoidance](https://doi.org/10.3389/fpsyg.2023.1287115)
   - Xia, T., Xu, X., & Ding, S. *Frontiers in Psychology, 14*, 1287115. 중국 광둥공업대 연구진.
