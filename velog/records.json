@@ -60,5 +60,67 @@
       }
     ],
     "savedAt": "2026-08-03T08:14:16.470Z"
+  },
+  {
+    "date": "2026-11-09",
+    "title": "청록 #12 - 마스크의 심리적 동기",
+    "note": "오기: 띄어쓰기 맞춤법이 상당히 많이 틀렸으며, 불필요한 쉼표와 접미어가 포함됨\n\n글의 맥락은 적절하지만 논리적인 흐름이 다소 부족함. 또, 개발 활용도에 미약한 수준.",
+    "ranking": [
+      {
+        "rank": 1,
+        "id": "problem",
+        "name": "문제의식",
+        "zone": "good"
+      },
+      {
+        "rank": 2,
+        "id": "tone",
+        "name": "감정 균형",
+        "zone": "good"
+      },
+      {
+        "rank": 3,
+        "id": "engineering",
+        "name": "공학적 구현",
+        "zone": "good"
+      },
+      {
+        "rank": 4,
+        "id": "citation",
+        "name": "인용과 출처",
+        "zone": "good"
+      },
+      {
+        "rank": 5,
+        "id": "ai",
+        "name": "AI 활용 방식",
+        "zone": "good"
+      },
+      {
+        "rank": 6,
+        "id": "logic",
+        "name": "논리의 흐름",
+        "zone": "bad"
+      },
+      {
+        "rank": 7,
+        "id": "data",
+        "name": "정량적 데이터화",
+        "zone": "bad"
+      },
+      {
+        "rank": 8,
+        "id": "structure",
+        "name": "글 구조",
+        "zone": "bad"
+      },
+      {
+        "rank": 9,
+        "id": "politics",
+        "name": "정치성 절제",
+        "zone": "bad"
+      }
+    ],
+    "savedAt": "2026-11-24T07:01:32.365Z"
   }
 ]
