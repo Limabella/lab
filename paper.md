@@ -109,6 +109,12 @@
   - 회복탄력성이 낮은 집단에서는 피질 현저성 네트워크 활성과 high-beta·gamma 파워가 증가하고, 높은 집단에서는 기본모드 네트워크와 후방 해마의 자발적 활성이 증가
   + 웨어러블 모델(시계열 데이터셋) - 프로젝트에서 스트레스 순간값뿐 아니라 회복 궤적과 시간 지연을 모델링하는 근거로 활용 가능
 
+- [2013-09-13] [Implicit and explicit social mentalizing: Dual processes driven by a shared neural network](https://doi.org/10.3389/fnhum.2013.00560)
+  - Van Overwalle, F., & Vandekerckhove, M. *Frontiers in Human Neuroscience, 7*, Article 560.
+  - 타인의 의도·신념·성격을 추론하는 암묵적·명시적 정신화의 신경과학적 근거를 정리한 종설
+  - ERP 연구에서는 초기 추론의 발생 시점이 유사하고, fMRI 연구에서는 측두두정접합부(TPJ)와 내측 전전두피질(mPFC) 등 핵심 정신화 신경망의 활성이 중첩됨을 보고
+  - 빠른 암묵적 직관을 명시적 추론이 수용하거나 검증·조정하는 default-adjustment 이중과정 관점을 지지하며, 두 과정이 완전히 분리된 신경망을 사용한다는 설명과 구분
+
 - [2008] [Habits, rituals, and the evaluative brain](https://doi.org/10.1146/annurev.neuro.29.051605.112851)
   - 기저핵과 선조체를 중심으로 습관 및 행동 자동화를 다룬 연구
   - Graybiel, A. M. *Annual Review of Neuroscience, 31*, 359–387.
@@ -163,6 +169,14 @@
 ---
 
 ## Psychology & Bias
+
+### Field Theory & Personality
+
+- [2021] [Personality Theory in Gestalt Theoretical Psychotherapy: Kurt Lewin’s Field Theory and his Theory of Systems in Tension Revisited](https://doi.org/10.2478/gth-2021-0002) ([OUCI](https://ouci.dntb.gov.ua/en/works/73Lyoq64/))
+  - Lindorfer, B. *Gestalt Theory, 43*(1), 29–46.
+  - 레빈(Kurt Lewin)의 역동적 장이론과 긴장체계 이론을 게슈탈트 이론적 심리치료(GTP)의 성격 이론 관점에서 재검토한 이론 논문
+  - 인간의 경험과 행동을 개인과 환경이 상호의존하는 심리적 장, 즉 생활공간(life space)의 함수로 설명하며, 환경에는 타인과의 관계도 포함
+  - 개인 내부의 특성뿐 아니라 주어진 환경과의 관계를 함께 살피고, 긴장체계를 통해 동기와 행동의 역동을 이해하는 관점을 제시
 
 ### Face Perception & Impression Management
 
